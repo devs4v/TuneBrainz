@@ -89,9 +89,11 @@
 #ontologyGraph {
     position:relative;
     width:600px;
-    height:600px;
+    height:525px;
     margin:auto;
     overflow:hidden;
+	background-color: #F0F0F0;
+	box-shadow: 0 0 2px 2px #E0E0E0;
 }
 .tip {
     color: #111;
@@ -111,6 +113,7 @@
 
 #overlay-footer{
 	border-top: 1px dashed #AAA;
+	background-color: #FFF;
 	position: absolute;
 	text-align: right;
 	font-family: trebuchet ms;

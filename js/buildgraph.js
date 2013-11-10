@@ -28,451 +28,346 @@ var Log = {
 
 function initGraph(){
   // init data
+  
   var json = [
-    {
+	{
+      "adjacencies": [], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "thing", 
+      "name": "Thing"
+    },
+	{
       "adjacencies": [
         {
-          "nodeTo": "graphnode1", 
-          "nodeFrom": "graphnode0", 
+          "nodeTo": "thing", 
+          "nodeFrom": "genre", 
           "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode3", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode2", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode4", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode10", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode6", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode11", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode12", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode13", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode14", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode15", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode16", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode17", 
-          "nodeFrom": "graphnode0", 
-          "data": {}
-        }
+        },
       ], 
       "data": {
         "$color": "#83548B", 
         "$type": "circle"
       }, 
-      "id": "graphnode0", 
-      "name": "Shivam"
-    }, 
-    {
+      "id": "genre", 
+      "name": "Genre"
+    },
+	{
       "adjacencies": [
         {
-          "nodeTo": "graphnode2", 
-          "nodeFrom": "graphnode1", 
+          "nodeTo": "thing", 
+          "nodeFrom": "person", 
           "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode3", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode4", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode5", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode6", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode7", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode8", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode9", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode10", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode11", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode12", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode13", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode14", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode15", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode16", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode17", 
-          "nodeFrom": "graphnode1", 
-          "data": {}
-        }
+        },
       ], 
       "data": {
         "$color": "#83548B", 
-        "$type": "star"
-      }, 
-      "id": "graphnode1", 
-      "name": "graphnode1"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode3", 
-          "nodeFrom": "graphnode2", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode5", 
-          "nodeFrom": "graphnode2", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode9", 
-          "nodeFrom": "graphnode2", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode18", 
-          "nodeFrom": "graphnode2", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#EBB056", 
         "$type": "circle"
       }, 
-      "id": "graphnode2", 
-      "name": "graphnode2"
-    }, 
-    {
+      "id": "person", 
+      "name": "Person"
+    },
+	{
       "adjacencies": [
         {
-          "nodeTo": "graphnode5", 
-          "nodeFrom": "graphnode3", 
+          "nodeTo": "thing", 
+          "nodeFrom": "agent", 
           "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode9", 
-          "nodeFrom": "graphnode3", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode10", 
-          "nodeFrom": "graphnode3", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode6", 
-          "nodeFrom": "graphnode3", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode11", 
-          "nodeFrom": "graphnode3", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode12", 
-          "nodeFrom": "graphnode3", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#70A35E", 
-        "$type": "triangle"
-      }, 
-      "id": "graphnode3", 
-      "name": "graphnode3"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#70A35E", 
-        "$type": "star"
-      }, 
-      "id": "graphnode4", 
-      "name": "graphnode4"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode9", 
-          "nodeFrom": "graphnode5", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#416D9C", 
-        "$type": "star"
-      }, 
-      "id": "graphnode5", 
-      "name": "graphnode5"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode10", 
-          "nodeFrom": "graphnode6", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode11", 
-          "nodeFrom": "graphnode6", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#416D9C", 
-        "$type": "star"
-      }, 
-      "id": "graphnode6", 
-      "name": "graphnode6"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#416D9C", 
-        "$type": "triangle"
-      }, 
-      "id": "graphnode7", 
-      "name": "graphnode7"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#EBB056", 
-        "$type": "star"
-      }, 
-      "id": "graphnode8", 
-      "name": "graphnode8"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#70A35E", 
-        "$type": "triangle"
-      }, 
-      "id": "graphnode9", 
-      "name": "graphnode9"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode11", 
-          "nodeFrom": "graphnode10", 
-          "data": {}
-        }
+        },
       ], 
       "data": {
         "$color": "#83548B", 
-        "$type": "triangle"
-      }, 
-      "id": "graphnode10", 
-      "name": "graphnode10"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#416D9C", 
-        "$type": "triangle"
-      }, 
-      "id": "graphnode11", 
-      "name": "graphnode11"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#70A35E", 
-        "$type": "square"
-      }, 
-      "id": "graphnode12", 
-      "name": "graphnode12"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode14", 
-          "nodeFrom": "graphnode13", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#416D9C", 
-        "$type": "square"
-      }, 
-      "id": "graphnode13", 
-      "name": "graphnode13"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#70A35E", 
-        "$type": "square"
-      }, 
-      "id": "graphnode14", 
-      "name": "graphnode14"
-    }, 
-    {
-      "adjacencies": [
-        {
-          "nodeTo": "graphnode16", 
-          "nodeFrom": "graphnode15", 
-          "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode17", 
-          "nodeFrom": "graphnode15", 
-          "data": {}
-        }
-      ], 
-      "data": {
-        "$color": "#C74243", 
         "$type": "circle"
       }, 
-      "id": "graphnode15", 
-      "name": "graphnode15"
-    }, 
-    {
+      "id": "agent", 
+      "name": "Agent"
+    },
+	{
       "adjacencies": [
         {
-          "nodeTo": "graphnode17", 
-          "nodeFrom": "graphnode16", 
+          "nodeTo": "thing", 
+          "nodeFrom": "product", 
           "data": {}
-        }
+        },
       ], 
-      "data": {
-        "$color": "#EBB056", 
-        "$type": "circle"
-      }, 
-      "id": "graphnode16", 
-      "name": "graphnode16"
-    }, 
-    {
-      "adjacencies": [], 
       "data": {
         "$color": "#83548B", 
-        "$type": "triangle"
+        "$type": "circle"
       }, 
-      "id": "graphnode17", 
-      "name": "graphnode17"
-    }, 
-    {
+      "id": "product", 
+      "name": "Product"
+    },
+	{
       "adjacencies": [
         {
-          "nodeTo": "graphnode19", 
-          "nodeFrom": "graphnode18", 
+          "nodeTo": "thing", 
+          "nodeFrom": "theme", 
           "data": {}
-        }, 
-        {
-          "nodeTo": "graphnode20", 
-          "nodeFrom": "graphnode18", 
-          "data": {}
-        }
+        },
       ], 
       "data": {
-        "$color": "#C74243", 
+        "$color": "#83548B", 
         "$type": "circle"
       }, 
-      "id": "graphnode18", 
-      "name": "graphnode18"
-    }, 
-    {
-      "adjacencies": [], 
+      "id": "theme", 
+      "name": "Theme"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "thing", 
+          "nodeFrom": "organization", 
+          "data": {}
+        },
+      ], 
       "data": {
-        "$color": "#EBB056", 
-        "$type": "star"
-      }, 
-      "id": "graphnode19", 
-      "name": "graphnode19"
-    }, 
-    {
-      "adjacencies": [], 
-      "data": {
-        "$color": "#416D9C", 
+        "$color": "#83548B", 
         "$type": "circle"
       }, 
-      "id": "graphnode20", 
-      "name": "graphnode20"
+      "id": "organization", 
+      "name": "Organization"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "thing", 
+          "nodeFrom": "mediatype", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "mediatype", 
+      "name": "MediaType"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "genre", 
+          "nodeFrom": "bookgenre", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "bookgenre", 
+      "name": "BookGenre"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "genre", 
+          "nodeFrom": "musicgenre", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "musicgenre", 
+      "name": "MusicGenre"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "singer", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "singer", 
+      "name": "Singer"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "author", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "author", 
+      "name": "Author"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "composer", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "composer", 
+      "name": "Composer"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "producer", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "producer", 
+      "name": "Producer"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "musicband", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "musicband", 
+      "name": "MusicBand"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "buyer", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "buyer", 
+      "name": "Buyer"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "person", 
+          "nodeFrom": "seller", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "seller", 
+      "name": "Seller"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "product", 
+          "nodeFrom": "books", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "books", 
+      "name": "Books"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "product", 
+          "nodeFrom": "music", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "music", 
+      "name": "Music"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "organization", 
+          "nodeFrom": "salesorganization", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "salesorganization", 
+      "name": "SalesOrganization"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "organization", 
+          "nodeFrom": "publisher", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "publisher", 
+      "name": "Publisher"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "mediatype", 
+          "nodeFrom": "musicmediatype", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "musicmediatype", 
+      "name": "MusicMediaType"
+    },
+	{
+      "adjacencies": [
+        {
+          "nodeTo": "mediatype", 
+          "nodeFrom": "bookmediatype", 
+          "data": {}
+        },
+      ], 
+      "data": {
+        "$color": "#83548B", 
+        "$type": "circle"
+      }, 
+      "id": "bookmediatype", 
+      "name": "BookMediaType"
     }
   ];
   // end
@@ -542,7 +437,7 @@ function initGraph(){
       nameContainer.innerHTML = node.name;
       domElement.appendChild(nameContainer);
       style.fontSize = "0.8em";
-      style.color = "#ddd";
+      style.color = "#222";
       //Toggle a node selection when clicking
       //its name. This is done by animating some
       //node styles like its dimension and the color
@@ -579,7 +474,8 @@ function initGraph(){
         });
         
         //$jit.id('inner-details').innerHTML = "You clicked on " + node.name + " and the ID is " + node.id;
-		alert("You clicked on: " + node.name);
+		$("#receiver").append("You chose " + node.name + " to explore further.");
+		closeOverlay();
       };
     },
     // Change node styles when DOM labels are placed
