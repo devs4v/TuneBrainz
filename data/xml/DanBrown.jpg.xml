@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mpeg7
+	xmlns="urn:mpeg:mpeg7:schema:2004"
+	xmlns:mpeg7="urn:mpeg:mpeg7:schema:2004"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:mpeg:mpeg7:schema:2004 mpeg7-2004.xsd">
+
+	<DescriptionMetadata>
+		<Version>1.0</Version>
+		<Comment>
+			<StructuredTextAnnotation>
+				<Concept>Books</Concept>
+				<FileName>
+					<MediaUri>/Data/Images/DanBrown.jpg</MediaUri>
+				</FileName>
+			</StructuredTextAnnotation>
+		</Comment>
+	</DescriptionMetadata>
+	<Description xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="ImageType">
+			<Image id="DanBrown">
+				<MediaInformation>
+					<MediaProfile>
+						<MediaFormat>
+
+
+							<Content href="urn:mpeg:mpeg7:cs:ContentCS:2001">
+								<Name>Visual</Name>
+							</Content>
+
+
+
+						
+							<FileFormat href="urn:mpeg:mpeg7:cs:FileFormatCS:2001:1">
+								<Name xml:lang="en">JPEG2000</Name>
+							</FileFormat>
+
+
+
+							<FileSize>7364</FileSize>
+
+
+
+							<VisualCoding>
+								<Format href="urn:mpeg:mpeg7:cs:VisualCodingFormatCS:2001:1">
+									<Name xml lang="en">JPEG2000</Name>
+								</Format>
+
+
+								<Frame height="290" width="174"/>
+								
+							</VisualCoding>
+
+						</MediaFormat>
+					</MediaProfile>
+				</MediaInformation>
+
+
+
+				<CreationInformation>
+					<Creation>
+						<Title type="main" xml:lang="en-US">DanBrown</Title>
+						<TitleMedia>
+							<TitleImage>
+								<MediaUri>/data/images/DanBrown.jpg</MediaUri>
+							</TitleImage>
+						</TitleMedia>
+						<Abstract>
+							<FreeTextAnnotation>DanBrown who wrote Inferno</FreeTextAnnotation>
+						</Abstract>
+					</Creation>
+					<Classification>
+						<Genre href="urn:mpeg:mpeg7:cs:GenreCS:2001:2.1.2">
+							<Name>Author</Name>
+						</Genre>
+						<Language type="original">en-US</Language>
+					</Classification>
+				</CreationInformation>
+				
+			</Image>
+		</MultimediaContent>
+	</Description>
+</Mpeg7> 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mpeg7
+	xmlns="urn:mpeg:mpeg7:schema:2004"
+	xmlns:mpeg7="urn:mpeg:mpeg7:schema:2004"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:mpeg:mpeg7:schema:2004 mpeg7-2004.xsd">
+
+	<DescriptionMetadata>
+		<Version>1.0</Version>
+		<Comment>
+			<StructuredTextAnnotation>
+				<Concept>Books</Concept>
+				<FileName>
+					<MediaUri>/Data/Images/WingsOfFire.jpg</MediaUri>
+				</FileName>
+			</StructuredTextAnnotation>
+		</Comment>
+	</DescriptionMetadata>
+	<Description xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="ImageType">
+			<Image id="WingsOfFire">
+				<MediaInformation>
+					<MediaProfile>
+						<MediaFormat>
+
+
+							<Content href="urn:mpeg:mpeg7:cs:ContentCS:2001">
+								<Name>Visual</Name>
+							</Content>
+
+
+
+						
+							<FileFormat href="urn:mpeg:mpeg7:cs:FileFormatCS:2001:1">
+								<Name xml:lang="en">JPEG2000</Name>
+							</FileFormat>
+
+
+
+							<FileSize>9394</FileSize>
+
+
+
+							<VisualCoding>
+								<Format href="urn:mpeg:mpeg7:cs:VisualCodingFormatCS:2001:1">
+									<Name xml lang="en">JPEG2000</Name>
+								</Format>
+
+
+								<Frame height="181" width="278"/>
+								
+							</VisualCoding>
+
+						</MediaFormat>
+					</MediaProfile>
+				</MediaInformation>
+
+
+
+				<CreationInformation>
+					<Creation>
+						<Title type="main" xml:lang="en-US">WingsOfFire</Title>
+						<TitleMedia>
+							<TitleImage>
+								<MediaUri>/data/images/WingsOfFire.jpg</MediaUri>
+							</TitleImage>
+						</TitleMedia>
+						<Abstract>
+							<FreeTextAnnotation>Has Themes Desire Greed and Murder</FreeTextAnnotation>
+						</Abstract>
+						<Creator>
+							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:AUTHOR"></Role>
+							<Agent>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:OrganizationType</xsi:type>
+								<Name>Abdul Kalam</Name>
+							</Agent>
+						</Creator>
+					</Creation>
+					<Classification>
+						<Genre href="urn:mpeg:mpeg7:cs:GenreCS:2001:2.1.2">
+							<Name>Novel</Name>
+						</Genre>
+						<Language type="original">en-US</Language>
+					</Classification>
+				</CreationInformation>
+				
+			</Image>
+		</MultimediaContent>
+	</Description>
+</Mpeg7> 

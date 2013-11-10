@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mpeg7
+	xmlns="urn:mpeg:mpeg7:schema:2004"
+	xmlns:mpeg7="urn:mpeg:mpeg7:schema:2004"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:mpeg:mpeg7:schema:2004 mpeg7-2004.xsd">
+
+	<DescriptionMetadata>
+		<Version>1.0</Version>
+		<Comment>
+			<StructuredTextAnnotation>
+				<Concept>Tracks</Concept>
+				<Concept>Firefly</Concept>
+				<Concept>Owl_City</Concept>
+				<Concept>Ocean_Eyes</Concept>
+				<FileName>
+					<MediaUri>/data/Tracks/StudioAlbums/Firefly.mp3</MediaUri>
+				</FileName>
+			</StructuredTextAnnotation>
+		</Comment>
+	</DescriptionMetadata>
+	<Description xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="AudioType">
+			<Audio id="audio1">
+				<MediaInformation>
+					<MediaProfile>
+						<MediaFormat>
+							<Content href="urn:mpeg:mpeg7:cs:ContentCS:2001">
+								<Name>Audio</Name>
+							</Content>
+							<Medium href="urn:mpeg:mpeg7:cs:MediumCS:2001">
+								<Name>Digital</Name>
+							</Medium>
+							<FileFormat href="urn:mpeg:mpeg7:cs:FileFormatCS:2001">
+								<Name>mp3</Name>
+							</FileFormat>
+							<BitRate>222000</BitRate>
+							<AudioCoding>
+								<Format href="urn:mpeg:mpeg7:cs:AudioCodingFormatCS:2001">
+									<Name>MPEG-1 Layer 3</Name>
+								</Format>
+								<AudioChannels>2</AudioChannels>
+								<Sample bitsPer="16" rate="44100.000000" />
+							</AudioCoding>
+						</MediaFormat>
+					</MediaProfile>
+				</MediaInformation>
+				<CreationInformation>
+					<Creation>
+						<Title type="main" xml:lang="en-US">Firefly</Title>
+						<TitleMedia>
+							<TitleImage>
+								<MediaUri>/data/images/Album/OceanEyes.jpg</MediaUri>
+							</TitleImage>
+						</TitleMedia>
+						<Abstract>
+							<FreeTextAnnotation>Firefly by Owl City from the Album Ocean Eyes</FreeTextAnnotation>
+						</Abstract>
+						<Creator>
+							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:SINGER"></Role>
+							<Agent>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:PersonType</xsi:type>
+								<Name xml:lang="en-US">Owl City</Name>
+							</Agent>
+						</Creator>
+					</Creation>
+					<Classification>
+						<Genre href="urn:mpeg:mpeg7:cs:GenreCS:2001:2.1.2">
+							<Name>Synthpop</Name>
+						</Genre>
+						<Language type="original">en-US</Language>
+					</Classification>
+				</CreationInformation>
+				<MediaTime>
+					<MediaDuration>P0DT0H03M48S</MediaDuration>
+				</MediaTime>
+			</Audio>
+		</MultimediaContent>
+	</Description>
+</Mpeg7> 

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mpeg7
+	xmlns="urn:mpeg:mpeg7:schema:2004"
+	xmlns:mpeg7="urn:mpeg:mpeg7:schema:2004"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:mpeg:mpeg7:schema:2004 mpeg7-2004.xsd">
+
+	<DescriptionMetadata>
+		<Version>1.0</Version>
+		<Comment>
+			<StructuredTextAnnotation>
+				<Concept>Tracks</Concept>
+				<Concept>Piya_Milenge</Concept>
+				<Concept>Raanjhanaa</Concept>
+				<Concept>Sukhwinder_Singh</Concept>
+				<Concept>KMMC_Sufi_Ensemble</Concept>
+				<FileName>
+					<MediaUri>/data/Tracks/MovieAlbums/PiyaMilenge.mp3</MediaUri>
+				</FileName>
+			</StructuredTextAnnotation>
+		</Comment>
+	</DescriptionMetadata>
+	<Description xsi:type="ContentEntityType">
+		<MultimediaContent xsi:type="AudioType">
+			<Audio id="audio1">
+				<MediaInformation>
+					<MediaProfile>
+						<MediaFormat>
+							<Content href="urn:mpeg:mpeg7:cs:ContentCS:2001">
+								<Name>Audio</Name>
+							</Content>
+							<Medium href="urn:mpeg:mpeg7:cs:MediumCS:2001">
+								<Name>Digital</Name>
+							</Medium>
+							<FileFormat href="urn:mpeg:mpeg7:cs:FileFormatCS:2001">
+								<Name>mp3</Name>
+							</FileFormat>
+							<BitRate>128000</BitRate>
+							<AudioCoding>
+								<Format href="urn:mpeg:mpeg7:cs:AudioCodingFormatCS:2001">
+									<Name>MPEG-1 Layer 3</Name>
+								</Format>
+								<AudioChannels>2</AudioChannels>
+								<Sample bitsPer="16" rate="44100.000000" />
+							</AudioCoding>
+						</MediaFormat>
+					</MediaProfile>
+				</MediaInformation>
+				<CreationInformation>
+					<Creation>
+						<Title type="main" xml:lang="en-US">Piya Milenge</Title>
+						<TitleMedia>
+							<TitleImage>
+								<MediaUri>/data/images/Album/Raanjhanaa.jpg</MediaUri>
+							</TitleImage>
+						</TitleMedia>
+						<Abstract>
+							<FreeTextAnnotation>Piya Milenge by Sukhwinder Singh and KMMC Sufi Ensemble from the Album Raanjhanaa</FreeTextAnnotation>
+						</Abstract>
+						<Creator>
+							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:SINGER"></Role>
+							<Agent>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:OrganizationType</xsi:type>
+								<Name xml:lang="en-US">Sukhwinder Singh</Name>
+								<Name xml:lang="en-US">KMMC Sufi Ensemble</Name>
+							</Agent>
+						</Creator>
+					</Creation>
+					<Classification>
+						<Genre href="urn:mpeg:mpeg7:cs:GenreCS:2001:2.1.2">
+							<Name>Popular</Name>
+						</Genre>
+						<Language type="original">hi</Language>
+					</Classification>
+				</CreationInformation>
+				<MediaTime>
+					<MediaDuration>P0DT0H05M55S</MediaDuration>
+				</MediaTime>
+			</Audio>
+		</MultimediaContent>
+	</Description>
+</Mpeg7> 
