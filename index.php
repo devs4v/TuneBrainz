@@ -21,7 +21,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 		<!--<link type="text/css" href="css/base.css" rel="stylesheet"/>-->
 		<link type="text/css" href="ForceDirected.css" rel="stylesheet"/>
 	</head>
-	
+
 	<body>
 		<div id="left-overlay">
 			<div id="pullmap">
@@ -35,7 +35,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<!--<img id="overlay-mapImage" src="data/images/ont/ontologySmall.jpg" data-zoom-image="data/images/ont/ontologyLarge.jpg"/>-->
 				<div id="ontologyGraph"></div>
 			</div>
-			<div id="overlay-footer">Click on the Ontology items to explore</div>
+			<div id="overlay-footer"><div id="log" style="display:none;"></div>Click on the Ontology items to explore</div>
 		</div>
 		<div id="wrapper">
 			<div id="lightbox-overlay"></div>

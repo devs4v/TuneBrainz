@@ -578,7 +578,8 @@ function initGraph(){
           duration: 500
         });
         
-        $jit.id('inner-details').innerHTML = "You clicked on " + node.name + " and the ID is " + node.id;
+        //$jit.id('inner-details').innerHTML = "You clicked on " + node.name + " and the ID is " + node.id;
+		alert("You clicked on: " + node.name);
       };
     },
     // Change node styles when DOM labels are placed
