@@ -13,9 +13,13 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 		<script type="text/javascript" src="backend/getdetails.js"></script>
-		<script type="text/javascript" src="js/jquery.elevatezoom.js"></script>
+		<!--<script type="text/javascript" src="js/jquery.elevatezoom.js"></script>-->
+		<script type="text/javascript" src="js/jit.js"></script>
+		<script type="text/javascript" src="js/buildgraph.js"></script>
 		<script type="text/javascript"><!--Insert immediate scripts here--></script>
-		<link rel="stylesheet" href="main.css"/>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<!--<link type="text/css" href="css/base.css" rel="stylesheet"/>-->
+		<link type="text/css" href="ForceDirected.css" rel="stylesheet"/>
 	</head>
 	
 	<body>
@@ -28,7 +32,8 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div style="font-family: verdana;font-weight: bolder;">Ontology Map</div>
 			</div>
 			<div id="overlay-main">
-				<img id="overlay-mapImage" src="data/images/ont/ontologySmall.jpg" data-zoom-image="data/images/ont/ontologyLarge.jpg"/>
+				<!--<img id="overlay-mapImage" src="data/images/ont/ontologySmall.jpg" data-zoom-image="data/images/ont/ontologyLarge.jpg"/>-->
+				<div id="ontologyGraph"></div>
 			</div>
 			<div id="overlay-footer">Click on the Ontology items to explore</div>
 		</div>
@@ -46,8 +51,8 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 			</div>
 			<div id="stage">
 				<div id="rightInfobox">
-					This happens to be written inside infobox<br/>
-					<input type="button" onclick="getDetails('BadtameezDil.mp3.xml');" value="get Details"/>
+					Click on a file to get its details<br/>
+					<!--<input type="button" onclick="getDetails('BadtameezDil.mp3.xml');" value="get Details"/>-->
 				</div>
 				<p id="receiver">
 					<input type="button" onclick="fetchXML();$(this).remove();" value="Get Data"/>

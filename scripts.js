@@ -16,13 +16,15 @@ function init(){
 		$("#searchInput").animate({"width":"90%", "font-size": "20px"}, 'fast');
 	});
 	
-	$('#overlay-mapImage').elevateZoom({
+	/*$('#overlay-mapImage').elevateZoom({
 					zoomType: "window",
 					cursor: "crosshair",
 					scrollZoom: true,
 					zoomWindowFadeIn: 200,
 					zoomWindowFadeOut: 200,
-				});
+				});*/
+				
+	initGraph();
 }
 
 function slideLeftClose(sel, speed){	//slideLeft for close
@@ -62,7 +64,7 @@ function fetchXML(){
 			//var htext = "";
 			var i = 0;
 			$.each(data.files, function(k, v){
-				divtext = "<div class='blk'><img src='/data/images/web/mp3icon.png' style=''/><div>";
+				divtext = "<div class='blk' onclick='getDetails(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
 				divtext += v.slice(0, -4);
 				divtext += "</div></div>";
 				$("#receiver").append(divtext);
