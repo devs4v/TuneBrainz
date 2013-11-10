@@ -91,24 +91,10 @@
     width:600px;
     height:525px;
     margin:auto;
+	vertical-align: middle;
     overflow:hidden;
 	background-color: #F0F0F0;
 	box-shadow: 0 0 2px 2px #E0E0E0;
-}
-.tip {
-    color: #111;
-    width: 139px;
-    background-color: white;
-    border:1px solid #ccc;
-    -moz-box-shadow:#555 2px 2px 8px;
-    -webkit-box-shadow:#555 2px 2px 8px;
-    -o-box-shadow:#555 2px 2px 8px;
-    box-shadow:#555 2px 2px 8px;
-    opacity:0.9;
-    filter:alpha(opacity=90);
-    font-size:10px;
-    font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
-    padding:7px;
 }
 
 #overlay-footer{
@@ -208,7 +194,8 @@
 }
 .blk:hover{
 	background-color: #E0E0E0;
-	box-shadow: 1px 3px 3px 3px #777;
+	margin: 1px 5px 5px 1px;
+	box-shadow: 2px 2px 3px 3px #777;
 }
 .blk:hover div{
 	background-color: #F8F8F8;
