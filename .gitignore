@@ -2,6 +2,10 @@
 ## Eclipse
 #################
 
+# Data files including the MP3 and the PDFs
+data/tracks/
+
+#################
 *.pydevproject
 .project
 .metadata
