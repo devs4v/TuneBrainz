@@ -60,6 +60,9 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 			</div>
 		</div>
 		<div id="footer">
+			<div style="float:left">
+				<a href="index2.php">SPARQL Query</a>
+			</div>
 			<div style="padding-right: 10px;">This Experiment brought to you by
 				<input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
 				<div id="names">
