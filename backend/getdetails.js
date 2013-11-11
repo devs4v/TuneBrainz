@@ -1,5 +1,5 @@
 function getDetails(file){
-	var dir = "/data/XML/" + file;
+	var dir = "/data/xml/" + file;
 	$.ajax({
 		url: dir,
 		method: 'get',
