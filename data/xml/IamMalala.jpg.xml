@@ -43,7 +43,7 @@
 
 							<VisualCoding>
 								<Format href="urn:mpeg:mpeg7:cs:VisualCodingFormatCS:2001:1">
-									<Name xml lang="en">JPEG2000</Name>
+									<Name xml:lang="en">JPEG2000</Name>
 								</Format>
 
 

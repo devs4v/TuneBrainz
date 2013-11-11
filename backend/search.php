@@ -1,10 +1,12 @@
 <?php
+function senderror(){
+	echo "{'error' : 1}";
+}
 //	search.php
 //	Will search for files with the concept that we need
 
-//$concept = $_GET['c'];
-$concept = "enrique";
-$dir = "//data/xml/";
+$concept = $_GET['c'];
+$dir = "../data/xml/";
 $darr = array(".", "..");
 // Open xml  directory, and read its contents
 if (is_dir($dir)){
@@ -35,6 +37,9 @@ else{
 }
 
 function findConcept($concept, $file){
-	$file = simplexml_load_file($file);
-	echo $file;
+	if $concept
+	$xml = simplexml_load_file($file);
+	
+	echo $xml;
+	return true;
 }
