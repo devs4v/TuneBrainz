@@ -39,7 +39,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 		</div>
 		<div id="wrapper">
 			<div id="lightbox-overlay"></div>
-			<div id="heading">Ontology Intelligence with Music and Books</div>
+			<div id="heading"><span class="heading-head">TuneBrainz</span> Ontology Intelligence with Music and Books</div>
 			<div style="width: 100%;margin-top:5px;">
 				<div id="searchBox">
 					<div id="searchBox-text">Search:</div>
