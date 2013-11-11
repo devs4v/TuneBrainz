@@ -474,6 +474,7 @@ function initGraph(){
         });
         
         alert("You chose " + node.name + " to explore further.");
+		search(node.name);
 		//searchDetails(node.name);
 		closeOverlay();
       };

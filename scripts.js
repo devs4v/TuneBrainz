@@ -67,6 +67,27 @@ function fetchXML(){
 	});
 }
 
+function search(concept){
+	$.ajax({
+		method: 'get',
+		data: {'c': concept},
+		url: 'backend/search.php',
+		dataType: 'json',
+		success: function(data){
+			//var htext = "";
+			var i = 0;
+			$.each(data.files, function(k, v){
+				divtext = "<div class='blk' onclick='getDetails(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
+				divtext += v.slice(0, -4);
+				divtext += "</div></div>";
+				$("#receiver").append(divtext);
+				$("#receiver .blk:last").hide();
+			});
+			piper();
+		}
+	});
+}
+
 function createProgress(){
 	var main = document.createElement("div");
 	var prog = document.createElement("img");

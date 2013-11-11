@@ -37,7 +37,9 @@ else{
 }
 
 function findConcept($concept, $file){
-	if $concept
+	if (strtolower($concept) == "thing"){
+		return true;
+	}
 	$xml = simplexml_load_file($file);
 	
 	echo $xml;

@@ -56,7 +56,6 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					<!--<input type="button" onclick="getDetails('BadtameezDil.mp3.xml');" value="get Details"/>-->
 				</div>
 				<p id="receiver">
-					<input type="button" onclick="fetchXML();$(this).remove();" value="Get Data"/>
 				</p>
 			</div>
 		</div>
