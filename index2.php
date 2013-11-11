@@ -9,7 +9,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Ontology based Music and Book Recommender System</title>
+		<title>TuneBrainz | SPARQL Query</title>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 		<script type="text/javascript" src="backend/getdetails.js"></script>
