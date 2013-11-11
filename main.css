@@ -208,7 +208,17 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /*	border-radius: 3px;*/
 	box-shadow: -2px 3px 3px 1px #777;
 }
-
+#rightInfobox table {
+	padding: 5px;
+	background-color: #3FADA8;
+	box-shadow: 0 0 1px 1px #6699AA;
+	width: 98%;
+	margin-left: 2px;
+	color: white;
+}
+#rightInfobox td{
+	padding: 1px;
+}
 textarea {
 	background-color:#bbb;
 	color:#333;
@@ -229,15 +239,6 @@ textarea {
 	color:#ccc;
 	border-radius: 0 5px 5px 0;
 	margin-top:2px;
-}
-
-table {
-        width:80%;
-padding:20px;
-}
-
-tr, td, th {
-        border: 1px solid #ccc;
 }
 
 
