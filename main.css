@@ -148,7 +148,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 	padding: 0px;
 	margin: 0px;
 	margin-right: 5px;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 /*	box-shadow: 0 0 1px 1px #eee;*/
 	font-size: 20px;
 /*	font-family: verdana, sans-serif;*/
@@ -180,7 +180,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /*	background-color: #E8E8E8;
 	box-shadow: 0 0 1px 1px #E0E0E0;
 	border-bottom: 2px solid #111;*/
-	border:2px solid #3fada8;
+	border:1px solid #3fada8;
 }
 #stage{
 /*	background-color: #ccc;*/
