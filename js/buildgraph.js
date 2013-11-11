@@ -472,11 +472,8 @@ function initGraph(){
                   'edge-property:lineWidth:color'],
           duration: 500
         });
-        
-        alert("You chose " + node.name + " to explore further.");
-		search(node.name);
-		//searchDetails(node.name);
-		closeOverlay();
+		closeOverlay();		//close the overlay to show the main window
+		search(node.name);	//call the search() function
       };
     },
     // Change node styles when DOM labels are placed

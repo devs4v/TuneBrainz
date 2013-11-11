@@ -11,7 +11,7 @@
 			<StructuredTextAnnotation>
 				<Concept>Books</Concept>
 				<FileName>
-					<MediaUri>/Data/Images/AruntadhiRoy.jpg</MediaUri>
+					<MediaUri>/Data/Images/ArundhatiRoy.jpg</MediaUri>
 				</FileName>
 			</StructuredTextAnnotation>
 		</Comment>
@@ -59,10 +59,10 @@
 
 				<CreationInformation>
 					<Creation>
-						<Title type="main" xml:lang="en-US">Arun</Title>
+						<Title type="main" xml:lang="en-US">Arundhati Roy</Title>
 						
 						<Abstract>
-							<FreeTextAnnotation>Aruntadhi Roy who wrote God of small things</FreeTextAnnotation>
+							<FreeTextAnnotation>Arundhati Roy who wrote God of small things</FreeTextAnnotation>
 						</Abstract>
 					</Creation>
 					<Classification>

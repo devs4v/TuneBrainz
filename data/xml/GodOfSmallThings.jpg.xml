@@ -71,8 +71,8 @@
 						<Creator>
 							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:AUTHOR"></Role>
 							<Agent>
-								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:OrganizationType</xsi:type>
-								<Name>Aruntadhi Roy</Name>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:PersonType</xsi:type>
+								<Name>Arundhati Roy</Name>
 							</Agent>
 						</Creator>
 					</Creation>

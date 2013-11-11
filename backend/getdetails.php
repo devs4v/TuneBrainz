@@ -1,14 +1,25 @@
 <?php
-function senderror(){
-	echo "{'error' : 1}";
+//	getdetails.php
+// 	Wil open each XML file and get its details from it.
+
+function senderror($desc){
+	echo "{'error' : 1, 'errdesc': ".$desc."}";
 }
 //	search.php
 //	Will search for files with the concept that we need
 
-$concept = $_GET['c'];
-$dir = "../data/xml/";
-$darr = array(".", "..");
-// Open xml  directory, and read its contents
+$xmlf = $_GET['file'];
+$file = "../data/xml/".$xmlf;
+//read file contents
+
+if (file_exists($file)){
+	
+}else{
+	senderror('No such file!');
+}
+
+
+
 if (is_dir($dir)){
 	if ($dh = opendir($dir)){
 		$data = array();
@@ -45,4 +56,5 @@ function findConcept($concept, $file){
 	echo $xml;
 	return true;
 }
+
 ?>

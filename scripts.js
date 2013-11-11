@@ -9,14 +9,29 @@ function init(){
 	$("#searchInput").focus(function(){							//When input is focused
 		slideLeftClose($("#searchBox-text"),'fast');			//Close the Searchbox's text
 		$("#searchInput").animate({"width":"99%", "font-size": "32px"}, 'slow');	//Expand inputbox
+		$("#searchExample").fadeIn();
 	});
 	
 	$("#searchInput").blur(function(){
 		slideLeftOpen($("#searchBox-text"), '9%' ,'slow');
 		$("#searchInput").animate({"width":"90%", "font-size": "20px"}, 'fast');
+		$("#searchExample").fadeOut();
 	});
 				
 	initGraph();	//Initialize and put graph
+	myPlaylist = [
+		{
+		mp3:'data/tracks/MovieAlbums/BadtameezDil.mp3',
+        title:'Badtameez Dil',
+        artist:'Benny Dayal',
+		duration:'3:40',
+        cover:'data/images/albums/YehJawaniHaiDiwani.jpg'
+		}
+	];
+	options = {
+        autoplay:false,
+   }
+	$("#musicPlayer").ttwMusicPlayer(myPlaylist, options);
 }
 
 function slideLeftClose(sel, speed){	//slideLeft for close

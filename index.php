@@ -13,13 +13,14 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 		<script type="text/javascript" src="backend/getdetails.js"></script>
-		<!--<script type="text/javascript" src="js/jquery.elevatezoom.js"></script>-->
 		<script type="text/javascript" src="js/jit.js"></script>
 		<script type="text/javascript" src="js/buildgraph.js"></script>
+		<script type="text/javascript" src="js/jquery-jplayer/jquery.jplayer.js"></script>
+		<script type="text/javascript" src="js/ttw-music-player-min.js"></script>
 		<script type="text/javascript"><!--Insert immediate scripts here--></script>
 		<link type="text/css" rel="stylesheet" href="main.css"/>
-		<!--<link type="text/css" href="css/base.css" rel="stylesheet"/>-->
-		<link type="text/css" href="ForceDirected.css" rel="stylesheet"/>
+		<link type="text/css" href="css/ForceDirected.css" rel="stylesheet"/>
+		<link type="text/css" href="js/musicplayercss/style.css" rel="stylesheet"/>
 	</head>
 
 	<body>
@@ -33,7 +34,6 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div style="font-family: verdana;font-weight: bolder;">Ontology Map</div>
 			</div>
 			<div id="overlay-main">
-				<!--<img id="overlay-mapImage" src="data/images/ont/ontologySmall.jpg" data-zoom-image="data/images/ont/ontologyLarge.jpg"/>-->
 				<div id="ontologyGraph"></div>
 			</div>
 			<div id="overlay-footer"><div id="log" style="display:none;"></div>Click on the Ontology items to explore</div>
@@ -48,15 +48,15 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 						<input type="text" id="searchInput" name="q" placeholder="Type Query Here..."/>
 						<input type="submit" style="display: none;"/>
 					</form>
+					<div class="tooltip" id="searchExample" style="margin-bottom: -23px;">Example usage: <i>Albums by Linkin Park</i></div>
 				</div>
 			</div>
 			<div id="stage">
 				<div id="rightInfobox">
 					Click on a file to get its details<br/>
-					<!--<input type="button" onclick="getDetails('BadtameezDil.mp3.xml');" value="get Details"/>-->
 				</div>
-				<p id="receiver">
-				</p>
+				<div id="musicPlayer"></div>
+				<div id="receiver"></div>
 			</div>
 		</div>
 		<div id="footer">
