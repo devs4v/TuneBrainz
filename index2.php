@@ -20,9 +20,11 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 	
 	<body>
 		<div id="left-overlay">
-			<div id="pullmap">
-				<img src="pullmap.png"/>
-			</div>
+                        <div id="pullmap">
+<!--                            <img src="pullmap.png"/>-->
+                                <p class="rotate">Pull Ontology Map</p>
+                        </div>
+
 			<div style="border-bottom: 2px solid #ddd;text-align: right;margin: 2px;margin-top: 25px;">
 				<div id="overlay-close">Close</div>
 				<div style="font-family: verdana;font-weight: bolder;">Ontology Map</div>

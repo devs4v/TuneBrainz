@@ -17,6 +17,25 @@
 	box-shadow: 0 0 3px 3px #FFF;
 	border-radius: 0 5px 5px 0;
 }
+.rotate {
+margin-top:250px;
+margin-left:-115px;
+font-size:17px;
+color:#333;
+font-weight:bold;
+letter-spacing:1px;
+width:250px;
+/* Safari */
+-webkit-transform: rotate(-90deg);
+/* Firefox */
+-moz-transform: rotate(-90deg);
+/* IE */
+-ms-transform: rotate(-90deg);
+/* Opera */
+-o-transform: rotate(-90deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
 #wrapper{
 	margin-left: 30px;
 	margin-bottom: 50px;
@@ -65,10 +84,15 @@
 	box-shadow: 2px 0 2px 0 #777;
 	border-radius: 0 5px 5px 0;
 }
-#pullmap:hover{
-	background-color: #C0C0C0;
-	box-shadow: 2px 0 2px 0 #A0A0A0;
+
+#pullmap:hover {
+/*	background-color: #C0C0C0;
+	box-shadow: 2px 0 2px 0 #A0A0A0;*/
 	cursor: pointer;
+}
+
+#pullmap:hover .rotate {
+	color:#3fada8;
 }
 #overlay-close{
 	position: absolute;
