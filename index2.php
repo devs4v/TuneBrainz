@@ -117,7 +117,7 @@ WHERE
 		</div>
                 <div id="footer">
 			<div style="float:left">
-				<a href="index2.php">SPARQL Query</a>
+				<a href="index.php">Home</a>
 			</div>
                         <div style="padding-right: 10px;">This Experiment brought to you by
                                 <input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
