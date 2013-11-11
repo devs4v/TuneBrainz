@@ -473,8 +473,8 @@ function initGraph(){
           duration: 500
         });
         
-        //$jit.id('inner-details').innerHTML = "You clicked on " + node.name + " and the ID is " + node.id;
-		$("#receiver").append("You chose " + node.name + " to explore further.");
+        alert("You chose " + node.name + " to explore further.");
+		//searchDetails(node.name);
 		closeOverlay();
       };
     },

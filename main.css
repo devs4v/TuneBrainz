@@ -210,13 +210,12 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 textarea {
-	background-color:#ccc;
+	background-color:#bbb;
 	color:#333;
-	border:none;
 	padding:10px;
-	margin:-10px 0 0 -10px; 
+	margin:0px 0 0 -10px; 
 	width:267px;
-	height:260px;
+	height:220px;
 }
 
 #receiver{
@@ -262,6 +261,7 @@ tr, td, th {
 	width: 151px;
 	position: absolute;
 	bottom: 2px;
+	overflow: hidden;
 }
 .blk img{
 	width: 75px;

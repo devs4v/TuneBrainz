@@ -58,6 +58,9 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 <!--					<h2>SPARQL Query</h2>-->
 
 <!--					<textarea name="query" cols="70" rows="15">-->
+				<h3 style="margin:2px 0 0 2px;color:#3fada8">SPARQL Query</h3>
+	
+
 					<textarea name="query">
 "PREFIX onto: <http://example.org/book/>
 SELECT ?subject ?object
