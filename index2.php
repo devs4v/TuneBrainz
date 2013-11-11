@@ -37,7 +37,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 			<div id="heading"><span class="heading-head">TuneBrainz</span> Ontology Intelligence with Music and Books</div>
 			<div style="width: 100%;margin-top:5px;">
 				<div id="searchBox">
-					<div id="searchBox-text">Search:</div>
+					<div id="searchBox-text">Search</div>
 					<form id="queryDB" method="post" action="query.php">
 						<input type="text" id="searchInput" name="q" placeholder="Type Query Here..."/>
 						<input type="submit" style="display: none;"/>
@@ -56,7 +56,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 <!--					<h2>SPARQL Query</h2>-->
 
 <!--					<textarea name="query" cols="70" rows="15">-->
-					<textarea name="query" style="height:270px;width:280px;">
+					<textarea name="query">
 "PREFIX onto: <http://example.org/book/>
 SELECT ?subject ?object
 WHERE
@@ -70,9 +70,44 @@ WHERE
 
 
 				</div>
-				<p id="receiver">
-					<input type="button" onclick="fetchXML();$(this).remove();" value="Get Data"/>
-				</p>
+				<div id="receiver-2">
+<!--					<input type="button" onclick="fetchXML();$(this).remove();" value="Get Data"/>-->
+<h3 style="margin:10px 0 0 10px;color:#3fada8">SPARQL Query Result</h3>
+
+<table>
+        <tr>
+                <th>?subject</th>
+                <th>?object</th>
+        </tr>
+
+        <tr>
+                <td>subject-1</td>
+                <td>obect-1</td>
+        </tr>
+        <tr>
+                <td>subject-2</td>
+                <td>obect-2</td>
+        </tr>
+        <tr>
+                <td>subject-3</td>
+                <td>obect-3</td>
+        </tr>
+        <tr>
+                <td>subject-4</td>
+                <td>obect-4</td>
+        </tr>
+        <tr>
+                <td>subject-5</td>
+                <td>obect-5</td>
+        </tr>
+        <tr>
+                <td>subject-6</td>
+                <td>obect-6</td>
+        </tr>
+</table>
+</div>
+
+
 			</div>
 		</div>
 		<div id="footer">
