@@ -77,7 +77,7 @@ WHERE
 		</div>
 		<div id="footer">
 			<div style="padding-right: 10px;">This Experiment brought to you by
-				<input type="button" onclick="$(this).hide();scrollNames();" value="Click for Team"/>
+				<input type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
 				<div id="names">
 					<span>Shivam</span>
 					<span>&nbsp;Akif&nbsp;</span>
