@@ -43,7 +43,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 			<div id="heading"><span class="heading-head">TuneBrainz</span> Ontology Intelligence with Music and Books</div>
 			<div style="width: 100%;margin-top:5px;">
 				<div id="searchBox">
-					<div id="searchBox-text">Search:</div>
+					<div id="searchBox-text">Search</div>
 					<form id="queryDB" method="post" action="query.php">
 						<input type="text" id="searchInput" name="q" placeholder="Type Query Here..."/>
 						<input type="submit" style="display: none;"/>
