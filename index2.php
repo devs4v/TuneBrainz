@@ -112,16 +112,17 @@ WHERE
 
 			</div>
 		</div>
-		<div id="footer">
-			<div style="padding-right: 10px;">This Experiment brought to you by
-				<input type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
-				<div id="names">
-					<span>Shivam</span>
-					<span>&nbsp;Akif&nbsp;</span>
-					<span>Archit</span>
-					<span>Mithun</span>
-				</div>
-			&copy; 2013 IIIT-Delhi</div>
-		</div>
+                <div id="footer">
+                        <div style="padding-right: 10px;">This Experiment brought to you by
+                                <input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
+                                <div id="names">
+                                        <span>Shivam</span>
+                                        <span>&nbsp;Akif&nbsp;</span>
+                                        <span>Archit</span>
+                                        <span>Mithun</span>
+                                </div>
+                        &copy; 2013 IIIT-Delhi</div>
+                </div>
+
 	</body>
 </html>
