@@ -15,16 +15,8 @@ function init(){
 		slideLeftOpen($("#searchBox-text"), '9%' ,'slow');
 		$("#searchInput").animate({"width":"90%", "font-size": "20px"}, 'fast');
 	});
-	
-	/*$('#overlay-mapImage').elevateZoom({
-					zoomType: "window",
-					cursor: "crosshair",
-					scrollZoom: true,
-					zoomWindowFadeIn: 200,
-					zoomWindowFadeOut: 200,
-				});*/
 				
-	initGraph();
+	initGraph();	//Initialize and put graph
 }
 
 function slideLeftClose(sel, speed){	//slideLeft for close
