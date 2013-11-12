@@ -62,6 +62,21 @@ function scrollNames(){
 	});
 }
 
+function openMP(){	//Open the MusicPlayer
+	$("#musicPlayer").animate({"margin-right": 0}, 'slow', 'swing');
+	$("#musicPlayer .jp-play").trigger('click');
+}
+function closeMP(){	//close the MusicPlayer
+	$("#musicPlayer").animate({"margin-right": -302}, 'slow', 'swing');
+}
+
+function openInfo(){	//Open the infobox
+	$("#rightInfobox").animate({"margin-right": 0}, 'slow', 'swing');
+}
+function closeInfo(){	//close the infobox
+	$("#rightInfobox").animate({"margin-right": -302}, 'slow', 'swing');
+}
+
 function fetchXML(){
 	$.ajax({
 		method: 'get',
@@ -71,7 +86,7 @@ function fetchXML(){
 			//var htext = "";
 			var i = 0;
 			$.each(data.files, function(k, v){
-				divtext = "<div class='blk' onclick='getDetails(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
+				divtext = "<div class='blk' onclick='getDetails2(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
 				divtext += v.slice(0, -4);
 				divtext += "</div></div>";
 				$("#receiver").append(divtext);
@@ -92,7 +107,7 @@ function search(concept){
 			//var htext = "";
 			var i = 0;
 			$.each(data.files, function(k, v){
-				divtext = "<div class='blk' onclick='getDetails(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
+				divtext = "<div class='blk' onclick='getDetails3(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
 				divtext += v.slice(0, -4);
 				divtext += "</div></div>";
 				$("#receiver").append(divtext);

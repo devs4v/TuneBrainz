@@ -52,8 +52,12 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				</div>
 			</div>
 			<div id="stage">
+					<input type="button" onclick="openInfo();" value="Open Info"/>
+					<input type="button" onclick="closeInfo();" value="Close Info"/>
 				<div id="rightInfobox">
 					Click on a file to get its details<br/>
+					<input type="button" onclick="openMP();" value="Open"/>
+					<input type="button" onclick="closeMP();" value="Close"/>
 				</div>
 				<div id="musicPlayer"></div>
 				<div id="receiver"></div>
@@ -64,7 +68,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<a href="index2.php">SPARQL Query</a>
 			</div>
 			<div style="padding-right: 10px;">This Experiment brought to you by
-				<input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6"/>
+				<input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6" title="Click for DevTeam"/>
 				<div id="names">
 					<span>Shivam</span>
 					<span>&nbsp;Akif&nbsp;</span>
