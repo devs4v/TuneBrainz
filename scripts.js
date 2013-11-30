@@ -1,24 +1,16 @@
 function init(){
 	/* Attaching all event handlers required */
-	$("#pullmap").click(function(){openOverlay();});			//Click for the pull map button.
 	
-	$("#overlay-close").click(function(){closeOverlay();});		//click event of the close button on overlay
-	
-	$("#lightbox-overlay").click(function(){closeOverlay();});	//close the overlay even if the lightbox cover is clicked.
-	
-	$("#searchInput").focus(function(){							//When input is focused
-		slideLeftClose($("#searchBox-text"),'fast');			//Close the Searchbox's text
-		$("#searchInput").animate({"width":"99%", "font-size": "32px"}, 'slow');	//Expand inputbox
-		$("#searchExample").fadeIn();
-	});
-	
-	$("#searchInput").blur(function(){
-		slideLeftOpen($("#searchBox-text"), '9%' ,'slow');
-		$("#searchInput").animate({"width":"90%", "font-size": "20px"}, 'fast');
-		$("#searchExample").fadeOut();
-	});
-				
 	initGraph();	//Initialize and put graph
+	
+	initMusicPlayer();	//Initialize music player
+	
+	$(".tab").each(function(){$(this).css({'visibility': 'visible'});});	//make everything visible
+	openTab('home');	//show the home tab
+	showHome();
+}
+
+function initMusicPlayer(myPlaylist){
 	myPlaylist = [
 		{
 		mp3:'data/tracks/MovieAlbums/BadtameezDil.mp3',
@@ -28,31 +20,34 @@ function init(){
         cover:'data/images/albums/YehJawaniHaiDiwani.jpg'
 		}
 	];
-	options = {
-        autoplay:false,
-   }
+	options = {autoplay:false};
 	$("#musicPlayer").ttwMusicPlayer(myPlaylist, options);
 }
 
-function slideLeftClose(sel, speed){	//slideLeft for close
-	sel.animate({"width": 0}, speed, function(){sel.hide();});
+function playMusic(node){
+	node = $(node);
+	myPlaylist = [
+		{
+		mp3: node.attr('data-mp3'),
+		title: node.attr('data-title'),
+		artist: node.attr('data-artist'),
+		duration: node.attr('data-duration'),
+		cover: node.attr('data-cover')
+		}
+	];
+	options = {autoplay:true};
+	$("#musicPlayer").html("");
+	$("#musicPlayer").ttwMusicPlayer(myPlaylist, options);
 }
 
-function slideLeftOpen(sel, val, speed){	//slideLeft for Open
-	sel.show();
-	sel.animate({"width": val}, speed);
-}
-
-function closeOverlay(){		//Close the Overlay by sliding to the left
-	$("#left-overlay").animate({"left": -1001}, 'slow', 'swing');
-	$("#lightbox-overlay").fadeOut('slow');
-	$("#pullmap").fadeIn('fast');
-}
+function showHome(){
+	/* Pull back elements for Animation*/
+	$("#home-head").css({'top':'200px', 'opacity':'0.0'});
+	$("#home-sub").css({'top':'400px', 'opacity':'0.0'});
 	
-function openOverlay(){			//Open the Overlay by sliding to the Right
-	$("#left-overlay").animate({"left": 0}, 'slow', 'swing');
-	$("#lightbox-overlay").fadeIn('slow');
-	$("#pullmap").fadeOut('fast');
+	$("#home-head").animate({'top':'250px', 'opacity':'1.0'}, 'slow','easeInOutBack', function(){
+		$("#home-sub").animate({'top':'350px', 'opacity':'1.0'}, 'slow','easeInOutBack');
+	});
 }
 
 function scrollNames(){
@@ -62,58 +57,28 @@ function scrollNames(){
 	});
 }
 
-function openMP(){	//Open the MusicPlayer
-	$("#musicPlayer").animate({"margin-right": 0}, 'slow', 'swing');
-	$("#musicPlayer .jp-play").trigger('click');
-}
-function closeMP(){	//close the MusicPlayer
-	$("#musicPlayer").animate({"margin-right": -302}, 'slow', 'swing');
-}
-
-function openInfo(){	//Open the infobox
-	$("#rightInfobox").animate({"margin-right": 0}, 'slow', 'swing');
-}
-function closeInfo(){	//close the infobox
-	$("#rightInfobox").animate({"margin-right": -302}, 'slow', 'swing');
-}
-
-function fetchXML(){
-	$.ajax({
-		method: 'get',
-		url: 'backend/XMLSearch.php',
-		dataType: 'json',
-		success: function(data){
-			//var htext = "";
-			var i = 0;
-			$.each(data.files, function(k, v){
-				divtext = "<div class='blk' onclick='getDetails2(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
-				divtext += v.slice(0, -4);
-				divtext += "</div></div>";
-				$("#receiver").append(divtext);
-				$("#receiver .blk:last").hide();
-			});
-			piper();
-		}
-	});
-}
-
 function search(concept){
+	createProgress();
+	$("#lightbox-overlay").fadeIn('fast');
+	
 	$.ajax({
 		method: 'get',
 		data: {'c': concept},
 		url: 'backend/search.php',
 		dataType: 'json',
 		success: function(data){
-			//var htext = "";
-			var i = 0;
+			$("#receiver").html("");
+		
 			$.each(data.files, function(k, v){
-				divtext = "<div class='blk' onclick='getDetails3(\"" + v + "\");'><img src='/data/images/web/mp3icon.png' style=''/><div>";
+				divtext = "<div class='blk' onclick='getDetails3(\"" + v + "\");' style='background-image:url(\"/data/images/albums/YehJawaniHaiDiwani.jpg\");background-size:100% 100%;background-repeat:no-repeat;'><div>";
 				divtext += v.slice(0, -4);
 				divtext += "</div></div>";
 				$("#receiver").append(divtext);
-				$("#receiver .blk:last").hide();
+				/*$("#receiver .blk:last").hide();*/
 			});
-			piper();
+			
+			deleteProgress();
+			$("#lightbox-overlay").fadeOut('fast');
 		}
 	});
 }
@@ -137,17 +102,12 @@ function deleteProgress(){
 	$("#progressbar").remove();
 }
 
-function piper(){
-	$.Deferred(function (dfr) {
-		dfr = dfr.pipe(function () { return $("#lightbox-overlay").fadeIn('slow'); });
-		dfr = dfr.pipe(function () { return createProgress(); });
-		$("#receiver .blk").each(function () {
-			var $div = $(this);
-			dfr = dfr.pipe(function () { return $div.fadeIn(100); });
-		});
-		dfr = dfr.pipe(function () { return deleteProgress(); });
-		dfr = dfr.pipe(function () { return $("#lightbox-overlay").fadeOut('fast'); });
-	}).resolve();
+function openTab(tab){
+	$(".tab").each(function(){$(this).hide();});
+	$("#" + tab).fadeIn('slow');
 }
+
+function showsidebar(){	$("#sidebar").fadeIn(); }
+function hidesidebar(){ $("#sidebar").fadeOut(); }
 
 $(document).ready(init);

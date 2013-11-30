@@ -1,7 +1,7 @@
 
 
 .ttw-music-player {
-    width: 370px;
+    width: 800px;
     font-family: arial, sans-serif;
 }
 
@@ -42,8 +42,8 @@
 .ttw-music-player .album-cover .img,
 .ttw-music-player .album-cover .highlight {
     display: block;
-    height: 125px;
-    width: 125px;
+    height: 45px;
+    width: 45px;
 }
 
 .ttw-music-player .album-cover img,
@@ -52,20 +52,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    height:125px;
-    width:125px;
+    height:45px;
+    width:45px;
 }
 
 /** Track Info **/
 .ttw-music-player .track-info {
-    width: 215px;
-    margin: 8px 0 0 30px;
+    width: 300px;
+    margin: 2px 0 0 5px;
     float: left;
     font-size: 12px;
 }
 
 .ttw-music-player .track-info p {
-    margin: 0 0 8px 0;
+    margin: 0 0 2px 0;
 }
 
 .ttw-music-player .player .title {
@@ -111,9 +111,8 @@
 
 /** Player **/
 .ttw-music-player .player-controls {
-    width: 250px;
+    width: 400px;
     height: 30px;
-	clear: left;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -165,7 +164,7 @@
 
 .ttw-music-player .progress-wrapper {
     height: 9px;
-    width: 165px;
+    width: 320px;
     float: left;
     background: transparent url(../images/player-progress.png) repeat-x 0 0 scroll;
     margin: 11px 10px 10px 0;
@@ -176,7 +175,7 @@
 
 .ttw-music-player .progress {
     height: 9px;
-    width: 135px;
+    width: 225px;
     cursor: pointer;
 }
 

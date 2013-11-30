@@ -1,0 +1,246 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', Trebuchet, Verdana, sans-serif;
+}
+body{
+	background-color: black;
+	background-image: url('data/images/web/bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top left;
+	background-size: 100% 100%;
+}
+#left-overlay{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	height: 600px;
+	width: 1000px;
+	top: 30px;
+	left: -1001px;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 20;
+	box-shadow: 0 0 3px 3px #FFF;
+	border-radius: 0 5px 5px 0;
+}
+.rotate {
+margin-top:250px;
+margin-left:-115px;
+font-size:17px;
+color:#333;
+font-weight:bold;
+letter-spacing:1px;
+width:250px;
+/* Safari */
+-webkit-transform: rotate(-90deg);
+/* Firefox */
+-moz-transform: rotate(-90deg);
+/* IE */
+-ms-transform: rotate(-90deg);
+/* Opera */
+-o-transform: rotate(-90deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#wrapper{
+	margin-left: 30px;
+	margin-bottom: 50px;
+	z-index: 5;
+}
+#lightbox-overlay{
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(20, 20, 20, 0.9);
+	z-index: 10;
+}
+#heading{
+	font-weight: bold;
+	font-size: 23px;
+	text-align: right;
+	padding: 20px 30px 20px 0;
+	text-transform:uppercase;
+	color:#333;
+}
+
+.heading-head {
+	letter-spacing:3px;
+	font-size:32px;
+	color:#02ACFE;
+	text-transform:capitalize;
+}
+
+#pullmap{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	right: -20px;
+	top: -1px;
+	float: right;
+	background-color: #EAEAEA;
+	height:602px;
+	width:20px;
+	box-shadow: 2px 0 2px 0 #777;
+	border-radius: 0 5px 5px 0;
+}
+
+#pullmap:hover {
+/*	background-color: #C0C0C0;
+	box-shadow: 2px 0 2px 0 #A0A0A0;*/
+	cursor: pointer;
+}
+
+#pullmap:hover .rotate {
+	color:#02ACFE;
+}
+#overlay-close{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 40px;
+	color: #FFF;
+	text-align: center;
+	background-color: #6699AA;
+	box-shadow: 0 0 1px 1px #6699AA;
+}
+#overlay-close:hover{
+	width: 50px;
+	box-shadow: 0 0 2px 2px #6699CC;
+	background-color: #6699CC;
+	cursor: pointer;
+	font-weight: bold;
+}
+#overlay-main{
+	text-align: center;
+	vertical-align: center;
+	height: 500px;
+}
+#overlay-mapImage{
+	width: 169px;
+	height: 300px;
+}
+
+#ontologyGraph {
+    position:relative;
+    width:800px;
+    height:550px;
+    margin:auto;
+	vertical-align: middle;
+    overflow:hidden;
+	background-color: #F0F0F0;
+	box-shadow: 0 0 2px 2px #E0E0E0;
+}
+
+#sidebar{
+	position: fixed;
+	left: 20px;
+	top: 20px;
+}
+#sidebar ul{
+	list-style-type: none;
+}
+#sidebar .sidebar-item{
+	background-color: #1D1D1D;
+	border: none;
+	border-left: 4px solid transparent;
+	border-bottom: 1px solid #000;
+	padding: 4px 25px 4px 20px;
+	color: #DDD;
+	font-weight: bold;
+	cursor: pointer;
+}
+#sidebar .sidebar-item:hover{
+	background-color: #111111;
+	border-left-color: rgba(2, 172, 254, 0.8);
+	color: #FFF;
+}
+#sidebar .side-selected{
+	border-left: 4px solid #02ACFE;
+}
+#sidebar .first-item{
+	border-radius: 2px 2px 0px 0px;
+}
+#sidebar .last-item{
+	border-radius: 0px 0px 2px 2px;
+}
+
+
+#footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	overflow: hidden;
+	background-color: white;
+	width: 100%;
+	text-align: center;
+	font-family: trebuchet ms;
+}
+#foot-main{
+	background-color: #3D3D3D;
+	color: white;
+	overflow: hidden;
+	padding-left: 30px;
+}
+#foot-main #logo{
+	color: #02ACFE;
+}
+#foot-low{
+	font-size: 12px;
+	background-color: #D1D1D1;
+}
+.foot-tab{
+	color: #CCC;
+	display: inline;
+	padding: 10px;
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-bottom: 4px solid rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+.foot-tab-selected{
+	border-bottom: 4px solid #02ACFE;
+}
+.foot-tab:hover{
+	color: #FFF;
+	border-bottom: 4px solid rgba(2, 172, 254, 0.8);
+}
+
+#musicPlayer{
+	margin: 3px 0px 3px 5px;
+	overflow: hidden;
+	font-size: 18px;
+	font-family: trebuchet ms;
+	background: url("data/images/web/playerbg.jpg") repeat scroll 0px 0px rgb(68, 68, 68);
+	color:#333;
+	float: right;
+	width: 800px;
+	border-radius: 3px;
+}
+
+#footer-button {
+	color:#02ACFE;
+	border:none;
+}
+#names{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	width: 100px;
+}
+#names span{
+	display: none;
+	margin: 0;
+	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: Monaco, serif;
+	cursor: pointer;
+}

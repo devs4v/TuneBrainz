@@ -1,0 +1,117 @@
+/*tabs.css*/
+.tab{
+	height: 600px;
+	width: 98%;
+	margin: 0;
+	padding: 0;
+	float: left;
+	visibility: hidden;
+	padding: 10px;
+	background-color: transparent;
+}
+/* Home Tab */
+#home-head{
+	font-size: 72px;
+	font-family: 'Days One', sans-serif;
+	font-weight: bold;
+	color: #02ACFE;
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	opacity: 0.0;
+}
+#home-sub{
+	font-size: 32px;
+	font-family: 'Days One', sans-serif;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: white;
+	position: absolute;
+	top: 350px;
+	left: 100px;
+	opacity: 0.0;
+}
+
+
+/* The Search Tab */
+#search{
+	background-color: rgba(235, 235, 235, 0.4);
+	color: white;
+}
+
+#search-showcase{
+	overflow: hidden;
+	height: 400px;
+	margin-top: 20px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	color: black;
+}
+.showcase-case{
+	float: left;
+	padding: 5px;
+	background-color: #E8E8E8;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 300px;
+	height: 400px;
+	border-radius: 2px;
+}
+.showcase-case ul{
+	margin-top: 5px;
+	height: 360px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.showcase-case h5{
+	font-size: 24px;
+	font-family: Verdana, sans-serif;
+	border-bottom: 1px solid black;
+	color: #02ACFE;
+	padding: 5px;
+}
+.showcase-case-item{
+	text-align: left;
+	margin: 2px 0px;
+	border-left: 5px solid transparent;
+	overflow: hidden;
+	font-size: 16px;
+	padding: 5px;
+}
+.showcase-case-item:hover{
+	background-color: #FFFFFF;
+	border-left: 5px solid grey;
+	cursor: pointer
+}
+.showcase-case-item-albumcover img{
+	height: 45px;
+	width: 45px;
+	float: left;
+}
+.showcase-case-item-playbtn{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.3);
+	background-image: url('data/images/web/playbtn.png');
+	height: 45px;
+	width: 45px;
+	display: none;
+}
+
+.showcase-case-item-albumcover:hover .showcase-case-item-playbtn{
+	display: block;
+}
+.showcase-case-item-track{
+	font-weight: bold;
+	padding-left: 5px;
+	float: left;
+	clear: right;
+	text-transform: uppercase;
+}
+.showcase-case-item-track:hover{
+	color: #02ACFE;
+}
+.showcase-case-item-artist{
+	font-style: italic;
+	padding-left: 10px;
+	float: left;
+}

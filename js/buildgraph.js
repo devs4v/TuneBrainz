@@ -472,7 +472,6 @@ function initGraph(){
                   'edge-property:lineWidth:color'],
           duration: 500
         });
-		closeOverlay();		//close the overlay to show the main window
 		search(node.name);	//call the search() function
       };
     },

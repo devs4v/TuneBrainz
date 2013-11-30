@@ -37,7 +37,7 @@ else{
 }
 
 function findConcept($concept, $file){
-	if (strtolower($concept) == "thing"){
+	if (strtolower($concept) == "thing"){	//if the chosen concept is a thing, then we need to return everything as it is the base class of all concepts
 		return true;
 	}
 	$xml = simplexml_load_file($file);
