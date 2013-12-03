@@ -30,17 +30,14 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 			<div id="sidebar">
 				<ul>
 					<li class="sidebar-item side-selected first-item" title="Go back to Homepage">Welcome</li>
-					<li class="sidebar-item" title="Discover new content based on your interests">Discover</li>
-					<li class="sidebar-item" title="Latest at TuneBrainz">Latest</li>
-					<li class="sidebar-item" title="View Ontology Map">View Map</li>
-					<li class="sidebar-item last-item" title="Search">Search</li>
+					<li class="sidebar-item" title="Latest at TuneBrainz" onclick="openTab('latest')">Latest</li>
+					<li class="sidebar-item" title="View Ontology Map" onclick="openTab('ontomap')">View Map</li>
+					<li class="sidebar-item last-item" title="Search" onclick="openTab('search');$('#search-query').focus();">Search</li>
 				</ul>
 			</div>
 			<div id="home" class="tab">
 				<div id="home-head"><img src="data/images/web/logo.png"/></div>
 				<div id="home-sub">Ontology Intelligence with Music and Books</div>
-			</div>
-			<div id="discover" class="tab">
 			</div>
 			<div id="latest" class="tab">
 				<div class="showbar">
@@ -243,9 +240,11 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 									<img src="data/images/albums/Fearless.jpg"/>
 									<div class="showcase-case-item-playbtn"></div>
 								</div>
-								<div class="showcase-case-item-track">Love Story</div>
-								<br/>
-								<div class="showcase-case-item-artist">Taylor Swift</div>
+								<div class="showcase-case-item-details">
+									<div class="showcase-case-item-track">Love Story</div>
+									<br/>
+									<div class="showcase-case-item-artist">Taylor Swift</div>
+								</div>
 							</li>
 							<li class="showcase-case-item">
 								<div class="showcase-case-item-albumcover" data-mp3="data/tracks/StudioAlbums/InTheEnd.mp3" data-title="In The End" data-artist="Linkin Park" data-duration="03:36" data-cover="data/images/albums/HybridTheory.jpg" onclick="playMusic($(this));">
@@ -334,7 +333,6 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 		<div id="footer">
 			<div id="foot-main">
 				<div id="logo" class="foot-tab foot-tab-selected" onclick="openTab('home');showHome();">TuneBrainz</div>
-				<div class="foot-tab" onclick="openTab('discover')">Discover</div>
 				<div class="foot-tab" onclick="openTab('latest')">Latest</div>
 				<div class="foot-tab" onclick="openTab('ontomap')">Ontology Map</div>
 				<div class="foot-tab" onclick="openTab('search');$('#search-query').focus();"><img src="http://localhost/data/images/web/search.png"/></div>

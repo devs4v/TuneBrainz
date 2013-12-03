@@ -153,8 +153,11 @@ function assignMouseWheelEvent(){
 }
 
 function handleSearch(){
-	$("#search-query").keyup(function(event){
-		search($(this).val());
+	$('#search-query').live('keypress',function(e){
+		var p = e.which;
+		if(p == 13){
+			search($('#search-query').val());
+		}
 	});
 }
 $(document).ready(init);
