@@ -242,8 +242,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div id="related-music" class="showcase-case">
 						<h5>Related Music</h5>
-						<ul></li>
-						</ul>
+						<ul></ul>
 					</div>
 				</div>
 			</div>
