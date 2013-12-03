@@ -1,15 +1,15 @@
 function getConceptMatch(query){
+	createProgress();
+	hideSearchResults();
 	$("#concept-matches ul").html("");
 	$("#related-books ul").html("");
 	$("#related-music ul").html("");
-	$("#av").append("waiting...");
 	$.ajax({
 		url: 'backend/get.php',
 		method: 'get',
 		data: {'q': query, 't': 'music'},
 		dataType: 'json',
 		success: function(data){
-			$("#av").append("Data received for music!");
 			htm = "";
 			resCount = data.resultCount;
 			if (resCount <2){num = resultCount;}else{num = 2;}
@@ -35,6 +35,7 @@ function getConceptMatch(query){
 				htm = htm + ht;
 			}
 			$("#concept-matches ul").append(htm);
+			$('#concept-matches').show('fast').fadeIn('fast');
 			htm = ""
 			if (resCount <10){num = resCount;}else{num = 10}
 			for (var i = 2; i <10; i++){
@@ -60,16 +61,15 @@ function getConceptMatch(query){
 				htm = htm + ht;
 			}
 			$("#related-music ul").append(htm);
+			$('#related-music').show('fast').fadeIn('fast');
 		}
 	});
-	$("#av").append("Waiting for Books...");
 	$.ajax({
 		url: 'backend/get.php',
 		method: 'get',
 		data: {'q': query, 't': 'book'},
 		dataType: 'json',
 		success: function(data){
-			$("#av").append("Data received for Books!");
 			htm = "";
 			resCount = data.resultCount;
 			if (resCount <2){num = resCount;}else{num = 2;}
@@ -95,6 +95,7 @@ function getConceptMatch(query){
 				htm = htm + ht;
 			}
 			$("#concept-matches ul").append(htm);
+			$('#concept-matches').show('fast').fadeIn('fast');
 			htm = ""
 			if (resCount <10){num = resCount;}else{num = 10}
 			for (var i = 2; i <num; i++){
@@ -120,8 +121,11 @@ function getConceptMatch(query){
 				htm = htm + ht;
 			}
 			$("#related-books ul").append(htm);
+			$('#related-books').show('fast').fadeIn('fast');
 		}
 	});
+	
+	deleteProgress();
 }
 
 function search(query){

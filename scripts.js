@@ -160,4 +160,17 @@ function handleSearch(){
 		}
 	});
 }
+
+function hideSearchResults(){
+	$('#concept-matches').hide('fast').fadeOut('fast');
+	$('#related-books').hide('fast').fadeOut('fast');
+	$('#related-music').hide('fast').fadeOut('fast');
+}
+
+function showSearchResults(){
+	$('#concept-matches').show('fast').fadeIn('fast');
+	$('#related-books').show('fast').fadeIn('fast');
+	$('#related-music').show('fast').fadeIn('fast');
+}
+
 $(document).ready(init);

@@ -32,7 +32,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					<li class="sidebar-item side-selected first-item" title="Go back to Homepage">Welcome</li>
 					<li class="sidebar-item" title="Latest at TuneBrainz" onclick="openTab('latest')">Latest</li>
 					<li class="sidebar-item" title="View Ontology Map" onclick="openTab('ontomap')">View Map</li>
-					<li class="sidebar-item last-item" title="Search" onclick="openTab('search');$('#search-query').focus();">Search</li>
+					<li class="sidebar-item last-item" title="Search" onclick="openTab('search');$('#search-query').val('').focus();">Search</li>
 				</ul>
 			</div>
 			<div id="home" class="tab">
@@ -43,7 +43,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div class="showbar">
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Fearless.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -55,7 +55,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/TumHiHo.mp3" data-title="Tum Hi Ho" data-artist="Arijit Singh" data-cover="data/images/albums/Aashiqui2.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Aashiqui2.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -69,7 +69,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/Raabta.mp3" data-title="Raabta" data-artist="Artist" data-cover="data/images/albums/AgentVinod.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/AgentVinod.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -81,7 +81,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/OneTwoThreeFour.mp3" data-title="One Two Three Four" data-artist="Vishal Dadlani, Hamsika Iyer" data-cover="data/images/albums/ChennaiExpress.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/ChennaiExpress.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -89,13 +89,13 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							<div class="showbar-item-details">
 								<div class="showbar-item-type">Track</div>
 								<div class="showbar-item-track">One Two Three Four</div>
-								<div class="showbar-item-artist">Chennai Express</div>
+								<div class="showbar-item-artist">Vishal Dadlani, Hamsika Iyer</div>
 							</div>
 						</div>
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/WhenImGone.mp3" data-title="When Im Gone" data-artist="Eminem" data-cover="data/images/albums/CurtainCall.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/CurtainCall.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -107,7 +107,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/InTheEnd.mp3" data-title="In The End" data-artist="Linkin Park" data-cover="data/images/albums/HybridTheory.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/HybridTheory.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -121,7 +121,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/DoYouKnow.mp3" data-title="Do You Know" data-artist="Enqrique Iglesias" data-cover="data/images/albums/Insomniac.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Insomniac.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -133,7 +133,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/TumseHi.mp3" data-title="Tumse Hi" data-artist="Mohit Chauhan" data-cover="data/images/albums/JabWeMet.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/JabWeMet.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -147,7 +147,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/OnTheFloor.mp3" data-title="On The Floor" data-artist="Jennifer Lopez" data-cover="data/images/albums/Love.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Love.png"/>
 								<div class="showbar-item-overlay"></div>
@@ -159,7 +159,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/SaddiGaliAaja.mp3" data-title="Saddi Gali Aaja" data-artist="Ayushmaan Khurraana" data-cover="data/images/albums/NautankiSaala.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/NautankiSaala.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -173,7 +173,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/Fireflies.mp3" data-title="Fireflies" data-artist="Owl City" data-cover="data/images/albums/OceanEyes.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/OceanEyes.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -185,7 +185,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/MovieAlbums/LatLagGayee.mp3" data-title="Lat Lag Gayee" data-artist="Benny Dayal" data-cover="data/images/albums/Race2.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Race2.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -199,7 +199,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					</div>
 					<div class="showbar-col">
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/TumHo.mp3" data-title="Tum Ho" data-artist="Mohit Chauhan" data-cover="data/images/albums/Rockstar.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Rockstar.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -211,7 +211,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 							</div>
 						</div>
 						<div class="showbar-item">
-							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));"></div>
+							<div class="showbar-item-playbtn" data-mp3="data/tracks/StudioAlbums/Lonely.mp3" data-title="Lonely" data-artist="Akon" data-cover="data/images/albums/Trouble.jpg" onclick="playMusic($(this));"></div>
 							<div class="showbar-item-albumcover">
 								<img src="data/images/albums/Trouble.jpg"/>
 								<div class="showbar-item-overlay"></div>
@@ -234,94 +234,17 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div id="search-showcase">
 					<div id="concept-matches" class="showcase-case">
 						<h5>Concept Matches</h5>
-						<ul>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover" data-mp3="data/tracks/StudioAlbums/LoveStory.mp3" data-title="Love Story" data-artist="Taylor Swift" data-duration="03:56" data-cover="data/images/albums/Fearless.jpg" onclick="playMusic($(this));">
-									<img src="data/images/albums/Fearless.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-details">
-									<div class="showcase-case-item-track">Love Story</div>
-									<br/>
-									<div class="showcase-case-item-artist">Taylor Swift</div>
-								</div>
-							</li>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover" data-mp3="data/tracks/StudioAlbums/InTheEnd.mp3" data-title="In The End" data-artist="Linkin Park" data-duration="03:36" data-cover="data/images/albums/HybridTheory.jpg" onclick="playMusic($(this));">
-									<img src="data/images/albums/HybridTheory.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-track">In The End</div>
-								<br/>
-								<div class="showcase-case-item-artist">Linkin Park</div>
-							</li>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover" data-mp3="data/tracks/MovieAlbums/TumHiHo.mp3" data-title="Tum Hi Ho" data-artist="Arijit Singh" data-duration="04:22" data-cover="data/images/albums/Aashiqui2.jpg" onclick="playMusic($(this));">
-									<img src="data/images/albums/Aashiqui2.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-track">Tum Hi Ho</div>
-								<br/>
-								<div class="showcase-case-item-artist">Arijit Singh</div>
-							</li>
-						</ul>
+						<ul></ul>
 					</div>
 					<div id="related-books" class="showcase-case">
 						<h5>Related Books</h5>
-						<ul>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover">
-									<img src="data/images/books/KillList.jpg"/>
-									<div class="showcase-case-item-playbtn" title="Play this track"></div>
-								</div>
-								<div class="showcase-case-item-track">Kill List</div>
-								<br/>
-								<div class="showcase-case-item-artist">Frederick Forsyth</div>
-							</li>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover">
-									<img src="data/images/books/Inferno.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-track">Inferno</div>
-								<br/>
-								<div class="showcase-case-item-artist">Dan Brown</div>
-							</li>
-						</ul>
+						<ul></ul>
 					</div>
 					<div id="related-music" class="showcase-case">
 						<h5>Related Music</h5>
-						<ul>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover">
-									<img src="data/images/albums/Trouble.jpg"/>
-									<div class="showcase-case-item-playbtn" title="Play this track"></div>
-								</div>
-								<div class="showcase-case-item-track">Lonely</div>
-								<br/>
-								<div class="showcase-case-item-artist">Akon</div>
-							</li>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover">
-									<img src="data/images/albums/CurtainCall.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-track">When I'm Gone</div>
-								<br/>
-								<div class="showcase-case-item-artist">Eminem</div>
-							</li>
-							<li class="showcase-case-item">
-								<div class="showcase-case-item-albumcover">
-									<img src="data/images/albums/Insomniac.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
-								</div>
-								<div class="showcase-case-item-track">Do You Know</div>
-								<br/>
-								<div class="showcase-case-item-artist">Enrique Iglesias</div>
-							</li>
+						<ul></li>
 						</ul>
 					</div>
-					<div id="av"></div>
 				</div>
 			</div>
 			<div id="ontomap" class="tab">
@@ -335,7 +258,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div id="logo" class="foot-tab foot-tab-selected" onclick="openTab('home');showHome();">TuneBrainz</div>
 				<div class="foot-tab" onclick="openTab('latest')">Latest</div>
 				<div class="foot-tab" onclick="openTab('ontomap')">Ontology Map</div>
-				<div class="foot-tab" onclick="openTab('search');$('#search-query').focus();"><img src="http://localhost/data/images/web/search.png"/></div>
+				<div class="foot-tab" onclick="openTab('search');$('#search-query').val('').focus();"><img src="http://localhost/data/images/web/search.png"/></div>
 				<div id="musicPlayer"></div>
 			</div>
 			<div id="foot-low" style="padding-right: 10px;">This Experiment brought to you by

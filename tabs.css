@@ -148,17 +148,17 @@
 #search-showcase{
 	overflow: hidden;
 	height: 400px;
-	margin-top: 20px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	color: black;
+	margin: 20px auto;
 }
 .showcase-case{
 	float: left;
 	padding: 5px;
 	background-color: #E8E8E8;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
 	width: 300px;
 	height: 400px;
 	border-radius: 2px;
