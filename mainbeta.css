@@ -10,6 +10,7 @@ body{
 	background-attachment: fixed;
 	background-position: top left;
 	background-size: 100% 100%;
+	overflow: hidden;
 }
 #left-overlay{
 	margin: 0;
@@ -140,7 +141,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 #sidebar{
 	position: fixed;
-	left: 20px;
+	left: -150px;
 	top: 20px;
 }
 #sidebar ul{
