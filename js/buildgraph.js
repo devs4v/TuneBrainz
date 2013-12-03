@@ -33,7 +33,7 @@ function initGraph(){
 	{
       "adjacencies": [], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#333333", 
         "$type": "circle"
       }, 
       "id": "thing", 
@@ -91,6 +91,16 @@ function initGraph(){
           "nodeFrom": "product", 
           "data": {}
         },
+        {
+          "nodeTo": "salesorganization", 
+          "nodeFrom": "product", 
+          "data": {}
+        },
+        {
+          "nodeTo": "seller", 
+          "nodeFrom": "product", 
+          "data": {}
+        },
       ], 
       "data": {
         "$color": "#83548B", 
@@ -103,6 +113,16 @@ function initGraph(){
       "adjacencies": [
         {
           "nodeTo": "thing", 
+          "nodeFrom": "theme", 
+          "data": {}
+        },
+        {
+          "nodeTo": "books", 
+          "nodeFrom": "theme", 
+          "data": {}
+        },
+        {
+          "nodeTo": "music", 
           "nodeFrom": "theme", 
           "data": {}
         },
@@ -136,6 +156,16 @@ function initGraph(){
           "nodeFrom": "mediatype", 
           "data": {}
         },
+	{
+	  "nodeTo": "books",
+	  "nodeFrom": "mediatype",
+	  "data": {}
+	},
+	{
+	  "nodeTo": "music",
+	  "nodeFrom": "mediatype",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -151,6 +181,11 @@ function initGraph(){
           "nodeFrom": "bookgenre", 
           "data": {}
         },
+	{
+	  "nodeTo": "books",
+	  "nodeFrom": "bookgenre",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -166,6 +201,11 @@ function initGraph(){
           "nodeFrom": "musicgenre", 
           "data": {}
         },
+	{
+	  "nodeTo": "music",
+	  "nodeFrom": "musicgenre",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -178,6 +218,11 @@ function initGraph(){
       "adjacencies": [
         {
           "nodeTo": "person", 
+          "nodeFrom": "singer", 
+          "data": {}
+        },
+        {
+          "nodeTo": "album", 
           "nodeFrom": "singer", 
           "data": {}
         },
@@ -211,6 +256,11 @@ function initGraph(){
           "nodeFrom": "composer", 
           "data": {}
         },
+	{
+	  "nodeTo": "music",
+	  "nodeFrom": "composer",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -226,6 +276,11 @@ function initGraph(){
           "nodeFrom": "producer", 
           "data": {}
         },
+	{
+	  "nodeTo": "music",
+	  "nodeFrom": "producer",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -238,6 +293,11 @@ function initGraph(){
       "adjacencies": [
         {
           "nodeTo": "person", 
+          "nodeFrom": "musicband", 
+          "data": {}
+        },
+        {
+          "nodeTo": "album", 
           "nodeFrom": "musicband", 
           "data": {}
         },
@@ -271,6 +331,11 @@ function initGraph(){
           "nodeFrom": "seller", 
           "data": {}
         },
+        {
+          "nodeTo": "product", 
+          "nodeFrom": "seller", 
+          "data": {}
+        },
       ], 
       "data": {
         "$color": "#83548B", 
@@ -286,6 +351,11 @@ function initGraph(){
           "nodeFrom": "books", 
           "data": {}
         },
+	{
+	  "nodeTo": "author",
+	  "nodeFrom": "books",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -298,6 +368,16 @@ function initGraph(){
       "adjacencies": [
         {
           "nodeTo": "product", 
+          "nodeFrom": "music", 
+          "data": {}
+        },
+        {
+          "nodeTo": "singer", 
+          "nodeFrom": "music", 
+          "data": {}
+        },
+        {
+          "nodeTo": "producer", 
           "nodeFrom": "music", 
           "data": {}
         },
@@ -316,6 +396,11 @@ function initGraph(){
           "nodeFrom": "salesorganization", 
           "data": {}
         },
+	{
+	  "nodeTo": "product",
+	  "nodeFrom": "salesorganization",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
@@ -331,6 +416,11 @@ function initGraph(){
           "nodeFrom": "publisher", 
           "data": {}
         },
+	{
+	  "nodeTo": "books",
+	  "nodeFrom": "publisher",
+	  "data": {}
+	}
       ], 
       "data": {
         "$color": "#83548B", 
