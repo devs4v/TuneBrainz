@@ -60,9 +60,15 @@
 						<Creator>
 							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:SINGER"></Role>
 							<Agent>
-								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:OrganizationType</xsi:type>
-								<Name xml:lang="en-US">Shreya Ghoshal</Name>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:PersonType</xsi:type>
 								<Name xml:lang="en-US">Nikhil Paul George</Name>
+							</Agent>
+						</Creator>
+						<Creator>
+							<Role href="urn:mpeg:mpeg7:cs:RoleCS:2001:SINGER"></Role>
+							<Agent>
+								<xsi:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">mpeg7:PersonType</xsi:type>
+								<Name xml:lang="en-US">Shreya Ghoshal</Name>
 							</Agent>
 						</Creator>
 					</Creation>

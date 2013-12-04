@@ -1,7 +1,7 @@
 /*tabs.css*/
 .tab{
-	height: 600px;
-	width: 98%;
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -31,28 +31,134 @@
 	left: 100px;
 	opacity: 0.0;
 }
+/* Discover and Latest Tabs */
+#latest{
+}
+.showbar{
+	height:600px;
+	/*background-color: rgba(240, 240, 240, 0.7);*/
+	overflow-y: hidden;
+	width: 3900px;
+	white-space: nowrap;
+}
+.showbar-col{
+	height: 600px;
+	float: left;
+	display: block;
+}
+.showbar-col-first{
+	margin-left: 50px;
+}
+.showbar-item{
+	height: 275px;
+	width: 275px;
+	margin: 4px 2px;
+	font-family: 'Days One', sans-serif;
+	position: relative;
+	overflow: hidden;
+}
+.showbar-item-playbtn{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	background-color: rgba(20, 20, 20, 0.4);
+	background-image: url('data/images/web/playbtn.png');
+	background-size: 100% 100%;
+	height: 45px;
+	width: 45px;
+	z-index: 10;
+}
+.showbar-item-playbtn:hover{
+	background-color: rgba(02, 172, 254, 1.0);
+	box-shadow: 0 0 1px 1px #02ACFE;
+}
+.showbar-item-albumcover img, .showbar-item-overlay{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+.showbar-item-overlay{
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.showbar-item-details{
+	position: absolute;
+	bottom: 0px;
+	/*background-color: rgba(250, 250, 250, 0.8);*/
+	color: black;
+	text-shadow: 0px 1px black;
+	width: 100%;
+	text-align: center;
+	margin-bottom: -26px;
+}
+.showbar-item-type{
+	text-align: left;
+	position: absolute;
+	top: -32px;
+	width: auto;
+	padding: 2px 10px;
+	text-transform: uppercase;
+	font-family: 'Days One', sans-serif;
+	font-size: 22px;
+	margin-left: 10px;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	text-shadow: none;
+}
+.showbar-item-track{
+	font-size: 32px;
+	font-family: 'Days One', sans-serif;
+	color: #02ACFE;
+}
+.showbar-item-artist{
+	font-style: italic;
+	font-size: 24px;
+	font-family: 'Days One', sans-serif;
+}
 
+.showbar-item:hover .showbar-item-details{
+	background-color: transparent;
+	color: white;
+}
+.showbar-item:hover .showbar-item-type{
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.showbar-item:hover .showbar-item-type:hover{
+	background-color: #02ACFE;
+}
+.showbar-item:hover .showbar-item-track{
+	color: white;
+}
 
 /* The Search Tab */
 #search{
 	background-color: rgba(235, 235, 235, 0.4);
 	color: white;
 }
-
+#search-query{
+	font-size: 72px;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #AAA;
+	color: #FFF;
+	width: 98%;
+}
 #search-showcase{
 	overflow: hidden;
 	height: 400px;
-	margin-top: 20px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	color: black;
+	margin: 20px auto;
 }
 .showcase-case{
 	float: left;
 	padding: 5px;
 	background-color: #E8E8E8;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
 	width: 300px;
 	height: 400px;
 	border-radius: 2px;
@@ -81,7 +187,7 @@
 .showcase-case-item:hover{
 	background-color: #FFFFFF;
 	border-left: 5px solid grey;
-	cursor: pointer
+	cursor: pointer;
 }
 .showcase-case-item-albumcover img{
 	height: 45px;
@@ -99,6 +205,9 @@
 
 .showcase-case-item-albumcover:hover .showcase-case-item-playbtn{
 	display: block;
+}
+.showcase-case-item-details{
+	margin-left: 50px;
 }
 .showcase-case-item-track{
 	font-weight: bold;

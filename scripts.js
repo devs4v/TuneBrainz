@@ -6,8 +6,13 @@ function init(){
 	initMusicPlayer();	//Initialize music player
 	
 	$(".tab").each(function(){$(this).css({'visibility': 'visible'});});	//make everything visible
+	hidesidebar();
 	openTab('home');	//show the home tab
 	showHome();
+	assignTabEvents();
+	assignCardEvents();
+	assignMouseWheelEvent();
+	handleSearch();
 }
 
 function initMusicPlayer(myPlaylist){
@@ -16,7 +21,7 @@ function initMusicPlayer(myPlaylist){
 		mp3:'data/tracks/MovieAlbums/BadtameezDil.mp3',
         title:'Badtameez Dil',
         artist:'Benny Dayal',
-		duration:'3:40',
+		duration: '00:00',
         cover:'data/images/albums/YehJawaniHaiDiwani.jpg'
 		}
 	];
@@ -31,7 +36,7 @@ function playMusic(node){
 		mp3: node.attr('data-mp3'),
 		title: node.attr('data-title'),
 		artist: node.attr('data-artist'),
-		duration: node.attr('data-duration'),
+		duration: '00:00',
 		cover: node.attr('data-cover')
 		}
 	];
@@ -46,7 +51,9 @@ function showHome(){
 	$("#home-sub").css({'top':'400px', 'opacity':'0.0'});
 	
 	$("#home-head").animate({'top':'250px', 'opacity':'1.0'}, 'slow','easeInOutBack', function(){
-		$("#home-sub").animate({'top':'350px', 'opacity':'1.0'}, 'slow','easeInOutBack');
+		$("#home-sub").animate({'top':'350px', 'opacity':'1.0'}, 'slow','easeInOutBack', function(){
+			showsidebar();
+		});
 	});
 }
 
@@ -105,9 +112,65 @@ function deleteProgress(){
 function openTab(tab){
 	$(".tab").each(function(){$(this).hide();});
 	$("#" + tab).fadeIn('slow');
+	if(tab != 'home'){
+		hidesidebar();
+	}
+	else{
+		showsidebar();
+	}
 }
 
-function showsidebar(){	$("#sidebar").fadeIn(); }
-function hidesidebar(){ $("#sidebar").fadeOut(); }
+function showsidebar(){	$("#sidebar").animate({'left':'20px'}, 'slow', 'easeOutBack'); }
+function hidesidebar(){ $("#sidebar").animate({'left':'-150px'}, 'slow', 'easeInBack'); }
+
+function assignTabEvents(){
+	$('.foot-tab').each(function(){
+		$(this).click(function(){
+			$('.foot-tab').each(function(){$(this).removeClass('foot-tab-selected');});
+			$(this).addClass('foot-tab-selected');
+		});
+	});
+}
+
+function assignCardEvents(){
+	$('.showbar-item').each(function(){
+		var me = $(this);
+		me.mouseenter(function(){
+			me.find('.showbar-item-details').animate({'margin-bottom':'0px'}, 'fast');
+			me.find('.showbar-item-overlay').fadeIn('fast');
+		}).mouseleave(function(){
+			me.find('.showbar-item-details').animate({'margin-bottom': '-30px'}, 'fast');
+			me.find('.showbar-item-overlay').fadeOut('fast');
+		});
+	});
+}
+
+function assignMouseWheelEvent(){
+	$('body').mousewheel(function(e, delta) {
+		this.scrollLeft -= (delta * 40);
+		e.preventDefault();
+	});
+}
+
+function handleSearch(){
+	$('#search-query').live('keypress',function(e){
+		var p = e.which;
+		if(p == 13){
+			search($('#search-query').val());
+		}
+	});
+}
+
+function hideSearchResults(){
+	$('#concept-matches').hide('fast').fadeOut('fast');
+	$('#related-books').hide('fast').fadeOut('fast');
+	$('#related-music').hide('fast').fadeOut('fast');
+}
+
+function showSearchResults(){
+	$('#concept-matches').show('fast').fadeIn('fast');
+	$('#related-books').show('fast').fadeIn('fast');
+	$('#related-music').show('fast').fadeIn('fast');
+}
 
 $(document).ready(init);
