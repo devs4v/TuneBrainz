@@ -166,8 +166,9 @@
 .showcase-case ul{
 	margin-top: 5px;
 	height: 360px;
-	overflow-y: auto;
-	overflow-x: hidden;
+	list-style-type: none;
+	/*overflow-y: auto;*/
+	/*overflow-x: hidden;*/
 }
 .showcase-case h5{
 	font-size: 24px;
@@ -257,11 +258,12 @@
 	position: absolute;
 	top: 15px;
 	left: 25px;
-	background-color: #02ACFE;
+	background-color: #CCC;
 	color: black;
 	z-index: 35;
-	width: 300px;
-	box-shadow: 0 0 1px #02ACFE;
+	width: 450px;
+	box-shadow: 0 0 10px #02ACFE;
+	padding: 0px 5px;
 }
 .showcase-case-desc-type{
 	background-color: white;
@@ -278,12 +280,18 @@
 	height: 100px;
 	width: 100px;
 }
-.showcase-case-desc-album, .showcase-case-desc-track, .showcase-case-desc-artist, .showcase-case-desc-genre{
+.showcase-case-desc-album, .showcase-case-desc-track, .showcase-case-desc-artist, .showcase-case-desc-genre, .showcase-case-desc-production{
 	font-family: 'Days One', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+.showcase-case-desc-album span, .showcase-case-desc-track span, .showcase-case-desc-artist span, .showcase-case-desc-genre span, .showcase-case-desc-production span{
+	font-family: 'Days One', sans-serif;
+	font-weight: normal;
 }
 .showcase-case-desc-details{
 	margin-left: 120px;
 }
 .showcase-case-desc-track{
-	font-family: 'Days One', sans-serif;
+	font-size: 28px;
 }

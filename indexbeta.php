@@ -252,17 +252,17 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 								<div class="showcase-case-description">
 									<div class="showcase-case-desc-type">Track</div>
 									<div class="showcase-case-desc-cover">
-										<img src="#" id="showcase-case-desc-coverimage"/>
-										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Album:<span>Hybrid Theory</span></div></a>
+										<img src="data/images/albums/HybridTheory.jpg" class="showcase-case-desc-coverimage"/>
+										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Hybrid Theory</div></a>
 									</div>
 									<div class="showcase-case-desc-details">
-										<div class="showcase-case-desc-track">Track: <span>In The End</span></div>
+										<div class="showcase-case-desc-track"><span>In The End</span></div>
 										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
 										<div class="showcase-case-desc-genre">Genre: <span>Rock</span></div>
-										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
-										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
 										<div class="showcase-case-desc-production">Production: <span>Whatever Records, Inc.</span></div>
-										<div class="showcase-case-desc-releasedate">October 23, 2007</div>
+										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
+										<div class="showcase-case-desc-releasedate">Release Date:<span>October 23, 2007</span></div>
+										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
 										<a href="#" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>
 									</div>
 								</div>
@@ -283,7 +283,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 								<div class="showcase-case-description">
 									<div class="showcase-case-desc-type">Track</div>
 									<div class="showcase-case-desc-cover">
-										<img src="#" id="showcase-case-desc-coverimage"/>
+										<img src="data/images/albums/Aashiqui2.jpg" class="showcase-case-desc-coverimage"/>
 										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Hybrid Theory</div></a>
 									</div>
 									<div class="showcase-case-desc-details">
