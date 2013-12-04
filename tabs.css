@@ -245,3 +245,45 @@
 	padding-left: 10px;
 	float: left;
 }
+.showcase-case li{
+	position: relative;
+}
+.showcase-case li:hover .showcase-case-description{
+	display: block;
+}
+/* showcase descriptions */
+.showcase-case-description{
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	background-color: #02ACFE;
+	color: black;
+	z-index: 35;
+	width: 300px;
+	box-shadow: 0 0 1px #02ACFE;
+}
+.showcase-case-desc-type{
+	background-color: white;
+	font-family: 'Days One', sans-serif;
+	padding: 2px;
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+.showcase-case-desc-cover{
+	width: 100px;
+	float: left;
+}
+.showcase-case-desc-coverimage{
+	height: 100px;
+	width: 100px;
+}
+.showcase-case-desc-album, .showcase-case-desc-track, .showcase-case-desc-artist, .showcase-case-desc-genre{
+	font-family: 'Days One', sans-serif;
+}
+.showcase-case-desc-details{
+	margin-left: 120px;
+}
+.showcase-case-desc-track{
+	font-family: 'Days One', sans-serif;
+}

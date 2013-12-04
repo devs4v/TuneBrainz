@@ -235,50 +235,67 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 					<div id="concept-matches" class="showcase-case">
 						<h5>Concept Matches</h5>
 						<ul>
-							<li class="showcase-case-item showcase-case-item-typetrack">
-								<div class="showcase-case-item-type">Track</div>
-								<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
-									<img src="data/images/albums/HybridTheory.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
+							<li>
+								<div class="showcase-case-item showcase-case-item-typetrack">
+									<div class="showcase-case-item-type">Track</div>
+									<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
+										<img src="data/images/albums/HybridTheory.jpg"/>
+										<div class="showcase-case-item-playbtn"></div>
+									</div>
+									<div class="showcase-case-item-details">
+										<div class="showcase-case-item-track">In The End</div>
+										<br/>
+										<div class="showcase-case-item-artist">Linkin Park</div>
+									</div>
 								</div>
-								<div class="showcase-case-item-details">
-									<div class="showcase-case-item-track">In The End</div>
-									<br/>
-									<div class="showcase-case-item-artist">Linkin Park</div>
-								</div>
+								
 								<div class="showcase-case-description">
-									<div class="showcase-case-desc-type">Book</div>
+									<div class="showcase-case-desc-type">Track</div>
 									<div class="showcase-case-desc-cover">
 										<img src="#" id="showcase-case-desc-coverimage"/>
-										<a href="#" id="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Album:<span>Hybrid Theory</span></div></a>
+										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Album:<span>Hybrid Theory</span></div></a>
 									</div>
 									<div class="showcase-case-desc-details">
 										<div class="showcase-case-desc-track">Track: <span>In The End</span></div>
 										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
+										<div class="showcase-case-desc-genre">Genre: <span>Rock</span></div>
 										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
+										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
+										<div class="showcase-case-desc-production">Production: <span>Whatever Records, Inc.</span></div>
+										<div class="showcase-case-desc-releasedate">October 23, 2007</div>
+										<a href="#" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>
 									</div>
-	$musicduration = $item['link'][1]['im:duration']['label'];
-	$musicpreview = $item['link'][1]['attributes']['href'];
-	$musicproducer = $item['rights']['label'];
-	$musicartist = $item['im:artist']['label'];
-	$musicgenre = $item['category']['attributes']['label'];
-	$musicreleasedate = $item['im:releaseDate']['attributes']['label'];
-	$musiclink = $item['id']['label'];
-									
-									"
 								</div>
 							</li>
-							
-							<li class="showcase-case-item showcase-case-item-typebook">
-								<div class="showcase-case-item-type">Track</div>
-								<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
-									<img src="data/images/albums/HybridTheory.jpg"/>
-									<div class="showcase-case-item-playbtn"></div>
+							<li>
+								<div class="showcase-case-item showcase-case-item-typebook">
+									<div class="showcase-case-item-type">Track</div>
+									<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
+										<img src="data/images/albums/HybridTheory.jpg"/>
+										<div class="showcase-case-item-playbtn"></div>
+									</div>
+									<div class="showcase-case-item-details">
+										<div class="showcase-case-item-track">In The End</div>
+										<br/>
+										<div class="showcase-case-item-artist">Linkin Park</div>
+									</div>
 								</div>
-								<div class="showcase-case-item-details">
-									<div class="showcase-case-item-track">In The End</div>
-									<br/>
-									<div class="showcase-case-item-artist">Linkin Park</div>
+								<div class="showcase-case-description">
+									<div class="showcase-case-desc-type">Track</div>
+									<div class="showcase-case-desc-cover">
+										<img src="#" id="showcase-case-desc-coverimage"/>
+										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Hybrid Theory</div></a>
+									</div>
+									<div class="showcase-case-desc-details">
+										<div class="showcase-case-desc-track">Track: <span>In The End</span></div>
+										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
+										<div class="showcase-case-desc-genre">Genre: <span>Rock</span></div>
+										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
+										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
+										<div class="showcase-case-desc-production">Production: <span>Whatever Records, Inc.</span></div>
+										<div class="showcase-case-desc-releasedate">October 23, 2007</div>
+										<a href="#" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>
+									</div>
 								</div>
 							</li>
 						</ul>
