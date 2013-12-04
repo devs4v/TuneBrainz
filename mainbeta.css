@@ -172,6 +172,19 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 	border-radius: 0px 0px 2px 2px;
 }
 
+#descriptionbox{
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	background-color: #CCC;
+	color: black;
+	z-index: 35;
+	width: 450px;
+	box-shadow: 0 0 10px #02ACFE;
+	padding: 0px 5px;
+	overflow: hidden;
+}
 
 #footer{
 	position: fixed;

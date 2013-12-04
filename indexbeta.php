@@ -27,6 +27,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 	</head>
 
 	<body>
+			<div id="descriptionbox"></div>
 			<div id="sidebar">
 				<ul>
 					<li class="sidebar-item side-selected first-item" title="Go back to Homepage">Welcome</li>
@@ -234,71 +235,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div id="search-showcase">
 					<div id="concept-matches" class="showcase-case">
 						<h5>Concept Matches</h5>
-						<ul>
-							<li>
-								<div class="showcase-case-item showcase-case-item-typetrack">
-									<div class="showcase-case-item-type">Track</div>
-									<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
-										<img src="data/images/albums/HybridTheory.jpg"/>
-										<div class="showcase-case-item-playbtn"></div>
-									</div>
-									<div class="showcase-case-item-details">
-										<div class="showcase-case-item-track">In The End</div>
-										<br/>
-										<div class="showcase-case-item-artist">Linkin Park</div>
-									</div>
-								</div>
-								
-								<div class="showcase-case-description">
-									<div class="showcase-case-desc-type">Track</div>
-									<div class="showcase-case-desc-cover">
-										<img src="data/images/albums/HybridTheory.jpg" class="showcase-case-desc-coverimage"/>
-										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Hybrid Theory</div></a>
-									</div>
-									<div class="showcase-case-desc-details">
-										<div class="showcase-case-desc-track"><span>In The End</span></div>
-										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
-										<div class="showcase-case-desc-genre">Genre: <span>Rock</span></div>
-										<div class="showcase-case-desc-production">Production: <span>Whatever Records, Inc.</span></div>
-										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
-										<div class="showcase-case-desc-releasedate">Release Date:<span>October 23, 2007</span></div>
-										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
-										<a href="#" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="showcase-case-item showcase-case-item-typebook">
-									<div class="showcase-case-item-type">Track</div>
-									<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
-										<img src="data/images/albums/HybridTheory.jpg"/>
-										<div class="showcase-case-item-playbtn"></div>
-									</div>
-									<div class="showcase-case-item-details">
-										<div class="showcase-case-item-track">In The End</div>
-										<br/>
-										<div class="showcase-case-item-artist">Linkin Park</div>
-									</div>
-								</div>
-								<div class="showcase-case-description">
-									<div class="showcase-case-desc-type">Track</div>
-									<div class="showcase-case-desc-cover">
-										<img src="data/images/albums/Aashiqui2.jpg" class="showcase-case-desc-coverimage"/>
-										<a href="#" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Hybrid Theory</div></a>
-									</div>
-									<div class="showcase-case-desc-details">
-										<div class="showcase-case-desc-track">Track: <span>In The End</span></div>
-										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
-										<div class="showcase-case-desc-genre">Genre: <span>Rock</span></div>
-										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
-										<a href="#" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>
-										<div class="showcase-case-desc-production">Production: <span>Whatever Records, Inc.</span></div>
-										<div class="showcase-case-desc-releasedate">October 23, 2007</div>
-										<a href="#" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>
-									</div>
-								</div>
-							</li>
-						</ul>
+						<ul></ul>
 					</div>
 					<div id="related-books" class="showcase-case">
 						<h5>Related Books</h5>
@@ -309,7 +246,6 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 						<ul></ul>
 					</div>
 				</div>
-				<div id="av" style="display: inline; float: left;">Waiting....</div>
 			</div>
 			<div id="ontomap" class="tab">
 				<div id="ontologyGraph"></div>
@@ -323,7 +259,6 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div class="foot-tab" onclick="openTab('latest')">Latest</div>
 				<div class="foot-tab" onclick="openTab('ontomap')">Ontology Map</div>
 				<div class="foot-tab" onclick="openTab('search');$('#search-query').val('').focus();"><img src="http://localhost/data/images/web/search.png"/></div>
-				<div id="musicPlayer"></div>
 			</div>
 			<div id="foot-low" style="padding-right: 10px;">This Experiment brought to you by
 				<input id="footer-button" type="button" onclick="$(this).hide();scrollNames();" value="Group-6" title="Click for DevTeam"/>

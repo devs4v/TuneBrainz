@@ -167,7 +167,7 @@
 	margin-top: 5px;
 	height: 360px;
 	list-style-type: none;
-	/*overflow-y: auto;*/
+	overflow-y: auto;
 	/*overflow-x: hidden;*/
 }
 .showcase-case h5{
@@ -249,21 +249,9 @@
 .showcase-case li{
 	position: relative;
 }
-.showcase-case li:hover .showcase-case-description{
-	display: block;
-}
 /* showcase descriptions */
 .showcase-case-description{
 	display: none;
-	position: absolute;
-	top: 15px;
-	left: 25px;
-	background-color: #CCC;
-	color: black;
-	z-index: 35;
-	width: 450px;
-	box-shadow: 0 0 10px #02ACFE;
-	padding: 0px 5px;
 }
 .showcase-case-desc-type{
 	background-color: white;
@@ -285,13 +273,22 @@
 	font-weight: bold;
 	font-size: 14px;
 }
-.showcase-case-desc-album span, .showcase-case-desc-track span, .showcase-case-desc-artist span, .showcase-case-desc-genre span, .showcase-case-desc-production span{
+.showcase-case-desc-album span, .showcase-case-desc-track span, .showcase-case-desc-artist span, .showcase-case-desc-genre span, .showcase-case-desc-production span, .showcase-case-desc-title span, .showcase-case-desc-author span, .showcase-case-desc-publisher{
 	font-family: 'Days One', sans-serif;
 	font-weight: normal;
 }
 .showcase-case-desc-details{
 	margin-left: 120px;
 }
-.showcase-case-desc-track{
+.showcase-case-desc-track, .showcase-case-desc-title{
 	font-size: 28px;
+}
+.showcase-case-desc-summary{
+	font-size: 10px;
+}
+.showcase-case-desc-typebook{
+	background-color: #DBFF94;
+}
+.showcase-case-desc-typetrack{
+	background-color: #B2F0FF;
 }

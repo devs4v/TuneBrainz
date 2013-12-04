@@ -1,98 +1,94 @@
-var genres = [];
 function getConceptMatch(query){
 	createProgress();
 	hideSearchResults();
 	$("#concept-matches ul").html("");
 	$("#related-books ul").html("");
 	$("#related-music ul").html("");
-	genres = [];
-	var limit = 10;
 	/* fill all concepts */
 	$.ajax({
-		url: 'backend/get.php',
+		url: 'backend/getconcepts.php',
 		method: 'get',
-		data: {'q': query, 't': 'music'},
+		data: {'q': query},
 		dataType: 'json',
 		success: function(data){
-			htm = "";
-			resCount = data.resultCount;
-			if (resCount <limit){num = resultCount;}else{num = limit;}
-			for (var i=0;i<num;i++){
-				artist = data.results[i].artistName;
-				album = data.results[i].collectionName;
-				track = data.results[i].trackCensoredName;
-				songURL = data.results[i].previewUrl;
-				cover = data.results[i].artworkUrl100;
+			//Fill music
+			var elem = $("#concept-matches ul");
+			elem.html("");
+			for(var i = 0; i < data.music.length; i++){
 				
-				if (i < 2){
-					genres.push(data.results[i].primaryGenreName);
-				}
-				$("#av").append("genres are:" + genres + "\n");
-				
-				ht = '<li class="showcase-case-item">';
-				ht = ht + '<div class="showcase-case-item-albumcover" data-mp3="' + songURL + '" data-title="' + track + '" data-artist="' + artist + '" data-cover="' + cover + '" onclick="playMusic($(this));">';
-				ht = ht + '<img src="' + cover + '"/>';
+				ht = '<li>';
+				ht = ht + '<div class="showcase-case-item showcase-case-item-typetrack">';
+				ht = ht + '<div class="showcase-case-item-type">Track</div>';
+				ht = ht + '<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">';
+				ht = ht + '<img src="' + data.music[i].cover + '"/>';
 				ht = ht + '<div class="showcase-case-item-playbtn"></div>';
 				ht = ht + '</div>';
 				ht = ht + '<div class="showcase-case-item-details">';
-				ht = ht + '<div class="showcase-case-item-track">' + track + '</div>';
+				ht = ht + '<div class="showcase-case-item-track">' + data.music[i].track + '</div>';
 				ht = ht + '<br/>';
-				ht = ht + '<div class="showcase-case-item-artist">' + artist + '</div>';
+				ht = ht + '<div class="showcase-case-item-artist">' + data.music[i].artist + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '';
+				ht = ht + '<div class="showcase-case-description">';
+				ht = ht + '<div class="showcase-case-desc-type showcase-case-desc-typetrack">Track</div>';
+				ht = ht + '<div class="showcase-case-desc-cover">';
+				ht = ht + '<img src="' + data.music[i].cover + '" class="showcase-case-desc-coverimage"/>';
+				ht = ht + '<a href="' + data.music[i].albumlink + '" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">' + data.music[i].album + '</div></a>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-desc-details">';
+				ht = ht + '<div class="showcase-case-desc-track"><span>' + data.music[i].track + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-artist">By: <span>' + data.music[i].artist + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-genre">Genre: <span>' + data.music[i].genre + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-releasedate">Release Date:<span>' + data.music[i].releasedate + '</span></div>';
+				ht = ht + '<a href="' + data.music[i].preview + '" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>';
+				ht = ht + '<a href="' + data.music[i].link + '" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>';
+				ht = ht + '</div>';
 				ht = ht + '</div>';
 				ht = ht + '</li>';
 				
-				htm = htm + ht;
-			}
-			$("#concept-matches ul").append(htm);
-			$('#concept-matches').show('fast').fadeIn('fast');
-		},
-		error: function(data){
-			$('#related-music').show('fast').fadeIn('fast');
-		}
-	});
-	$.ajax({
-		url: 'backend/get.php',
-		method: 'get',
-		data: {'q': query, 't': 'book'},
-		dataType: 'json',
-		success: function(data){
-			htm = "";
-			resCount = data.resultCount;
-			if (resCount < limit){num = resCount;}else{num = limit;}
-			for (var i=0;i<num;i++){
-				artist = data.results[i].artistName;
-				album = data.results[i].collectionName;
-				track = data.results[i].trackCensoredName;
-				songURL = data.results[i].previewUrl;
-				cover = data.results[i].artworkUrl100;
+				elem.append(ht);
+			}				
 				
-				if(i < 2){
-					str = data.results[i].genres;
-					for (var j = 0; j < str.length; j++){
-						if (str[j] != "Books"){
-							genres.push(str[j]);
-						}
-					}
-				}
-				ht = '<li class="showcase-case-item">';
-				ht = ht + '<div class="showcase-case-item-albumcover" data-mp3="' + songURL + '" data-title="' + track + '" data-artist="' + artist + '" data-cover="' + cover + '" onclick="playMusic($(this));">';
-				ht = ht + '<img src="' + cover + '"/>';
-				ht = ht + '<div class="showcase-case-item-playbtn"></div>';
+			//Fill books
+			for(i = 0; i < data.books.length; i++){
+				
+				ht = '<li>';
+				ht = ht + '<div class="showcase-case-item showcase-case-item-typebook">';
+				ht = ht + '<div class="showcase-case-item-type">Book</div>';
+				ht = ht + '<div class="showcase-case-item-albumcover">';
+				ht = ht + '<img src="' + data.books[i].image + '"/>';
 				ht = ht + '</div>';
 				ht = ht + '<div class="showcase-case-item-details">';
-				ht = ht + '<div class="showcase-case-item-track">' + track + '</div>';
+				ht = ht + '<div class="showcase-case-item-track">' + data.books[i].name + '</div>';
 				ht = ht + '<br/>';
-				ht = ht + '<div class="showcase-case-item-artist">' + artist + '</div>';
+				ht = ht + '<div class="showcase-case-item-artist">' + data.books[i].author + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-description">';
+				ht = ht + '<div class="showcase-case-desc-type showcase-case-desc-typebook">Book</div>';
+				ht = ht + '<div class="showcase-case-desc-cover">';
+				ht = ht + '<img src="' + data.books[i].image + '" class="showcase-case-desc-coverimage"/>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-desc-details">';
+				ht = ht + '<div class="showcase-case-desc-title"><span>' + data.books[i].name + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-author">By: <span>' + data.books[i].author + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-genre">Genre: <span>' + data.books[i].genre + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-publisher">Publisher: <span>' + data.books[i].publisher + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-releasedate">' + data.books[i].releasedate + '</div>';
+				ht = ht + '<a href="' + data.books[i].link + '" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Book</div></a>';
+				ht = ht + '</div>';
 				ht = ht + '</div>';
 				ht = ht + '</li>';
 				
-				htm = htm + ht;
+				elem.append(ht);
 			}
-			$("#concept-matches ul").append(htm);
 			$('#concept-matches').show('fast').fadeIn('fast');
+			reattachMouseDesc();
 		},
-		error: function(data){
-			$('#related-books').show('fast').fadeIn('fast');
+		error: function(){
+			alert("Oops! An error occurred while fetching Matching Concepts!\nPlease Try Again!");
+			deleteProgress();
 		}
 	});
 	/* Filled all concepts */
@@ -102,10 +98,94 @@ function getConceptMatch(query){
 		data: {'q': query},
 		dataType: 'json',
 		success: function(data){
-		
+			//Fill music
+			var elem = $("#related-music ul");
+			elem.html("");
+			for(var i = 0; i < data.music.length; i++){
+				
+				ht = '<li>';
+				ht = ht + '<div class="showcase-case-item showcase-case-item-typetrack">';
+				ht = ht + '<div class="showcase-case-item-type">Track</div>';
+				ht = ht + '<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">';
+				ht = ht + '<img src="' + data.music[i].cover + '"/>';
+				ht = ht + '<div class="showcase-case-item-playbtn"></div>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-item-details">';
+				ht = ht + '<div class="showcase-case-item-track">' + data.music[i].track + '</div>';
+				ht = ht + '<br/>';
+				ht = ht + '<div class="showcase-case-item-artist">' + data.music[i].artist + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '';
+				ht = ht + '<div class="showcase-case-description">';
+				ht = ht + '<div class="showcase-case-desc-type showcase-case-desc-typetrack">Track</div>';
+				ht = ht + '<div class="showcase-case-desc-cover">';
+				ht = ht + '<img src="' + data.music[i].cover + '" class="showcase-case-desc-coverimage"/>';
+				ht = ht + '<a href="' + data.music[i].albumlink + '" class="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">' + data.music[i].album + '</div></a>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-desc-details">';
+				ht = ht + '<div class="showcase-case-desc-track"><span>' + data.music[i].track + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-artist">By: <span>' + data.music[i].artist + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-genre">Genre: <span>' + data.music[i].genre + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-production">Production: <span>' + data.music[i].producer + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-duration">Duration: <span>' + data.music[i].duration + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-releasedate">Release Date:<span>' + data.music[i].releasedate + '</span></div>';
+				ht = ht + '<a href="' + data.music[i].preview + '" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Track</div></a>';
+				ht = ht + '<a href="' + data.music[i].link + '" class="showcase-case-desc-musiclink" target="_blank"><div class="showcase-case-desc-music">Buy this Track on iTunes</div></a>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</li>';
+				
+				elem.append(ht);
+				$('#related-music').show('fast').fadeIn('fast');
+			}				
+				
+			//Fill books
+			elem = $("#related-books ul");
+			elem.html("");
+			for(i = 0; i < data.books.length; i++){
+				
+				ht = '<li>';
+				ht = ht + '<div class="showcase-case-item showcase-case-item-typebook">';
+				ht = ht + '<div class="showcase-case-item-type">Book</div>';
+				ht = ht + '<div class="showcase-case-item-albumcover">';
+				ht = ht + '<img src="' + data.books[i].image + '"/>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-item-details">';
+				ht = ht + '<div class="showcase-case-item-track">' + data.books[i].name + '</div>';
+				ht = ht + '<br/>';
+				ht = ht + '<div class="showcase-case-item-artist">' + data.books[i].author + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-description">';
+				ht = ht + '<div class="showcase-case-desc-type showcase-case-desc-typebook">Book</div>';
+				ht = ht + '<div class="showcase-case-desc-cover">';
+				ht = ht + '<img src="' + data.books[i].image + '" class="showcase-case-desc-coverimage"/>';
+				ht = ht + '</div>';
+				ht = ht + '<div class="showcase-case-desc-details">';
+				ht = ht + '<div class="showcase-case-desc-title"><span>' + data.books[i].name + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-author">By: <span>' + data.books[i].author + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-genre">Genre: <span>' + data.books[i].genre + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-publisher">Publisher: <span>' + data.books[i].publisher + '</span></div>';
+				ht = ht + '<div class="showcase-case-desc-releasedate">' + data.books[i].releasedate + '</div>';
+				ht = ht + '<a href="' + data.books[i].link + '" class="showcase-case-desc-previewlink" target="_blank"><div class="showcase-case-desc-preview">Preview this Book</div></a>';
+				ht = ht + '</div>';
+				ht = ht + '</div>';
+				ht = ht + '</li>';
+				
+				elem.append(ht);
+				$('#related-books').show('fast').fadeIn('fast');
+			}
+			
+		deleteProgress();
+		reattachMouseDesc();
+		},
+		error: function(){
+			alert("Oops! An error occurred while fetching Related Things!\nPlease Try Again!");
+			deleteProgress();
+		}
 	});
-	$("#av").append("genres are (after filling):" + genres + "\n");
-	deleteProgress();
+	
 }
 
 function search(query){

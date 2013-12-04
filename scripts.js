@@ -3,7 +3,7 @@ function init(){
 	
 	initGraph();	//Initialize and put graph
 	
-	initMusicPlayer();	//Initialize music player
+	//initMusicPlayer();	//Initialize music player
 	
 	$(".tab").each(function(){$(this).css({'visibility': 'visible'});});	//make everything visible
 	hidesidebar();
@@ -13,6 +13,8 @@ function init(){
 	assignCardEvents();
 	assignMouseWheelEvent();
 	handleSearch();
+	attachMouseDesc();
+	hideSearchResults();
 }
 
 function initMusicPlayer(myPlaylist){
@@ -98,7 +100,7 @@ function createProgress(){
 	main.appendChild(prog);
 	main.innerHTML = main.innerHTML + "<br/>Processing";
 	$('body').append(main);
-	var lb = $("#lightbox-overlay");
+	var lb = $(window);
 	main = $("#progressbar");
 	main.css({"z-index": 20, "position": "absolute", "text-align": "center", "background-color": "#FFF", "box-shadow": "1px 1px 3px 3px #777", "border-radius": "5px", "padding": "5px", "font-family": "trebuchet ms"});
 	width = (lb.width() - main.width())/2;
@@ -173,4 +175,36 @@ function showSearchResults(){
 	$('#related-music').show('fast').fadeIn('fast');
 }
 
+function attachMouseDesc(){
+	$(".showcase-case ul li").mouseenter(function(e){
+		htm = $(this).find('.showcase-case-description').html();
+		if(e.pageX < ($(window).width() - 320)){
+			mleft = e.pageX;
+		}
+		else{
+			mleft = e.pageX - 300;
+		}
+		if(e.pageY < ($(window).height() - 300)){
+			mtop = e.pageY;
+		}
+		else{
+			mtop = e.pageY - 300;
+		}
+		$("#descriptionbox").html(htm).css({			
+			top: (mtop + 5) + "px",
+			left: (mleft + 5) + "px"
+		}).show('fast');
+	});
+	$("#descriptionbox").mouseleave(function(e){
+		$(this).hide('fast');
+	});
+}
+
+
+function reattachMouseDesc(){
+	$('.showcase-case ul li').unbind();
+	$('.showcase-case ul li').unbind();
+	
+	attachMouseDesc();
+}
 $(document).ready(init);
