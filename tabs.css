@@ -183,11 +183,21 @@
 	overflow: hidden;
 	font-size: 16px;
 	padding: 5px;
+	position: relative;
+	width: auto;
 }
 .showcase-case-item:hover{
 	background-color: #FFFFFF;
-	border-left: 5px solid grey;
 	cursor: pointer;
+}
+.showcase-case-item-typebook:hover{
+	border-left: 5px solid green;
+}
+.showcase-case-item-typetrack:hover{
+	border-left: 5px solid blue;
+}
+.showcase-case-item:hover .showcase-case-item-type{
+	color: #02ACFE;
 }
 .showcase-case-item-albumcover img{
 	height: 45px;
@@ -202,12 +212,23 @@
 	width: 45px;
 	display: none;
 }
+.showcase-case-item-type{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-size: 16px;
+	font-family: 'Days One', sans-serif;
+}
+.showcase-case-item-type:hover{
+	color: #02ACFE;
+}
 
 .showcase-case-item-albumcover:hover .showcase-case-item-playbtn{
 	display: block;
 }
 .showcase-case-item-details{
 	margin-left: 50px;
+	padding-right: 40px;
 }
 .showcase-case-item-track{
 	font-weight: bold;

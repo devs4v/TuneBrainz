@@ -234,7 +234,54 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 				<div id="search-showcase">
 					<div id="concept-matches" class="showcase-case">
 						<h5>Concept Matches</h5>
-						<ul></ul>
+						<ul>
+							<li class="showcase-case-item showcase-case-item-typetrack">
+								<div class="showcase-case-item-type">Track</div>
+								<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
+									<img src="data/images/albums/HybridTheory.jpg"/>
+									<div class="showcase-case-item-playbtn"></div>
+								</div>
+								<div class="showcase-case-item-details">
+									<div class="showcase-case-item-track">In The End</div>
+									<br/>
+									<div class="showcase-case-item-artist">Linkin Park</div>
+								</div>
+								<div class="showcase-case-description">
+									<div class="showcase-case-desc-type">Book</div>
+									<div class="showcase-case-desc-cover">
+										<img src="#" id="showcase-case-desc-coverimage"/>
+										<a href="#" id="showcase-case-desc-albumlink"><div class="showcase-case-desc-album">Album:<span>Hybrid Theory</span></div></a>
+									</div>
+									<div class="showcase-case-desc-details">
+										<div class="showcase-case-desc-track">Track: <span>In The End</span></div>
+										<div class="showcase-case-desc-artist">By: <span>Linkin Park</span></div>
+										<div class="showcase-case-desc-duration">Duration: <span>03:36</span></div>
+									</div>
+	$musicduration = $item['link'][1]['im:duration']['label'];
+	$musicpreview = $item['link'][1]['attributes']['href'];
+	$musicproducer = $item['rights']['label'];
+	$musicartist = $item['im:artist']['label'];
+	$musicgenre = $item['category']['attributes']['label'];
+	$musicreleasedate = $item['im:releaseDate']['attributes']['label'];
+	$musiclink = $item['id']['label'];
+									
+									"
+								</div>
+							</li>
+							
+							<li class="showcase-case-item showcase-case-item-typebook">
+								<div class="showcase-case-item-type">Track</div>
+								<div class="showcase-case-item-albumcover" onclick="playMusic($(this));">
+									<img src="data/images/albums/HybridTheory.jpg"/>
+									<div class="showcase-case-item-playbtn"></div>
+								</div>
+								<div class="showcase-case-item-details">
+									<div class="showcase-case-item-track">In The End</div>
+									<br/>
+									<div class="showcase-case-item-artist">Linkin Park</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 					<div id="related-books" class="showcase-case">
 						<h5>Related Books</h5>
@@ -245,6 +292,7 @@ Username: a4816234 		Password: tunebrainz!23		Server: server12.000webhost.com
 						<ul></ul>
 					</div>
 				</div>
+				<div id="av" style="display: inline; float: left;">Waiting....</div>
 			</div>
 			<div id="ontomap" class="tab">
 				<div id="ontologyGraph"></div>
