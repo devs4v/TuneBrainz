@@ -48,8 +48,8 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "genre", 
       "name": "Genre"
@@ -63,7 +63,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "person", 
@@ -103,7 +103,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#30AD23", 
         "$type": "circle"
       }, 
       "id": "product", 
@@ -128,8 +128,8 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#DC143C", 
+        "$type": "square"
       }, 
       "id": "theme", 
       "name": "Theme"
@@ -168,8 +168,8 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "mediatype", 
       "name": "MediaType"
@@ -188,8 +188,8 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "bookgenre", 
       "name": "BookGenre"
@@ -208,8 +208,8 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "musicgenre", 
       "name": "MusicGenre"
@@ -228,7 +228,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "singer", 
@@ -243,7 +243,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "author", 
@@ -263,7 +263,7 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "composer", 
@@ -283,7 +283,7 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "producer", 
@@ -303,7 +303,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "musicband", 
@@ -318,7 +318,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "buyer", 
@@ -338,7 +338,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#F09C06", 
         "$type": "circle"
       }, 
       "id": "seller", 
@@ -358,7 +358,7 @@ function initGraph(){
 	}
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#30AD23", 
         "$type": "circle"
       }, 
       "id": "books", 
@@ -383,7 +383,7 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
+        "$color": "#30AD23", 
         "$type": "circle"
       }, 
       "id": "music", 
@@ -438,8 +438,8 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "musicmediatype", 
       "name": "MusicMediaType"
@@ -453,8 +453,8 @@ function initGraph(){
         },
       ], 
       "data": {
-        "$color": "#83548B", 
-        "$type": "circle"
+        "$color": "#777777", 
+        "$type": "square"
       }, 
       "id": "bookmediatype", 
       "name": "BookMediaType"
